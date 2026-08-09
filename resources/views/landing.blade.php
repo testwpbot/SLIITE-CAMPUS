@@ -36,6 +36,10 @@
         .btn-shine { position: relative; overflow: hidden; }
         .btn-shine::after { content: ''; position: absolute; top: 0; left: 0; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); transform: translateX(-100%); transition: transform 0.6s; }
         .btn-shine:hover::after { transform: translateX(200%); }
+        .nav-link { position: relative; padding-bottom: 4px; }
+        .nav-link::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: #FFB703; transition: width 0.28s ease; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link.active { color: #0F2D4D; }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
@@ -63,12 +67,12 @@
                 <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[50px] w-auto object-contain">
             </a>
             <nav class="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-slate-700 mx-auto">
-                <a href="#" class="text-navy border-b-2 border-gold pb-1 leading-none">Home</a>
-                <a href="#" class="hover:text-navy flex items-center gap-1 leading-none">Programs <i class="ri-arrow-down-s-line text-slate-400 text-[16px]"></i></a>
-                <a href="#" class="hover:text-navy leading-none">About</a>
-                <a href="#" class="hover:text-navy leading-none">LMS</a>
-                <a href="#" class="hover:text-navy leading-none">Admissions</a>
-                <a href="#" class="hover:text-navy leading-none">Contact</a>
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link flex items-center gap-1">Programs <i class="ri-arrow-down-s-line text-slate-400 text-[16px]"></i></a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">LMS</a>
+                <a href="#" class="nav-link">Admissions</a>
+                <a href="#" class="nav-link">Contact</a>
             </nav>
             <div class="flex items-center gap-3 shrink-0">
                 <a href="/login" class="hidden md:inline-flex items-center gap-1.5 text-sm font-bold text-navy hover:text-navy-600 leading-none"><i class="ri-user-3-line text-[16px]"></i> Student Login</a>
