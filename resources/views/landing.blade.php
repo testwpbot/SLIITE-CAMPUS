@@ -59,9 +59,11 @@
         </div>
     </div>
 
-    <!-- Navbar — scroll: transparent on hero → white on scroll (sticky, not fixed) -->
-    <header id="mainHeader" class="sticky top-0 z-50 bg-white/0 border-b border-transparent transition-all duration-300">
-        <div class="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center">
+    <!-- Navbar — seamless with hero: same #F7FBFC background at top, turns white on scroll -->
+    <header id="mainHeader" class="sticky top-0 z-50 bg-[#F7FBFC] border-b border-transparent transition-all duration-300">
+        <!-- matching hero grid pattern inside header so they blend -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: linear-gradient(#0F2D4D 1px, transparent 1px), linear-gradient(90deg, #0F2D4D 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <div class="relative max-w-[1280px] mx-auto px-6 h-[72px] flex items-center">
             <a href="/" class="flex items-center shrink-0">
                 <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[62px] lg:h-[72px] w-auto object-contain">
             </a>
@@ -318,16 +320,18 @@
     </footer>
 
     <script>
-        // Header scroll switch: transparent on hero → white + shadow on scroll (sticky)
+        // Header: same as hero at top (#F7FBFC) → white on scroll
         (function(){
             const h = document.getElementById('mainHeader');
             function onScroll(){
                 if(window.scrollY > 6){
                     h.classList.add('bg-white/95','backdrop-blur','glass','shadow-[0_8px_30px_rgba(15,45,77,0.08)]','border-slate-200/60');
-                    h.classList.remove('bg-white/0','border-transparent');
+                    h.classList.remove('bg-[#F7FBFC]','border-transparent');
+                    h.querySelector('div.absolute').style.opacity = '0';
                 } else {
                     h.classList.remove('bg-white/95','backdrop-blur','glass','shadow-[0_8px_30px_rgba(15,45,77,0.08)]','border-slate-200/60');
-                    h.classList.add('bg-white/0','border-transparent');
+                    h.classList.add('bg-[#F7FBFC]','border-transparent');
+                    h.querySelector('div.absolute').style.opacity = '1';
                 }
             }
             window.addEventListener('scroll', onScroll, {passive:true});
