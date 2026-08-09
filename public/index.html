@@ -245,34 +245,42 @@
         })();
     </script>
 
-    <!-- Why SIITE — LMS Focus: Videos, Papers, Quizzes -->
-    <section class="bg-white py-16">
-        <div class="max-w-[1280px] mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto">
+    <!-- Why SIITE — LMS Focus: Visual split with mockup -->
+    <section class="bg-white py-16 overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+            <!-- Left: LMS mockup visual -->
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-navy/[0.06] to-gold/[0.06] rounded-[32px] blur-2xl"></div>
+                <img src="/images/lms-mockup.png" alt="SIITE LMS Dashboard" class="relative w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(15,45,77,0.15)] rounded-2xl">
+                <!-- floating badge -->
+                <div class="absolute -bottom-4 -right-2 lg:right-6 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3 border border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-gold text-navy grid place-items-center"><i class="ri-vidicon-line"></i></div>
+                    <div><div class="text-sm font-extrabold text-navy">24/7 Access</div><div class="text-xs text-slate-500">Any device, anytime</div></div>
+                </div>
+            </div>
+            <!-- Right: features timeline -->
+            <div>
                 <div class="inline-flex items-center gap-2 bg-navy text-white rounded-full px-4 py-1.5 text-xs font-extrabold tracking-widest">WHY SIITE LMS</div>
                 <h2 class="font-display font-extrabold text-[32px] lg:text-[38px] leading-tight text-navy mt-4">Everything you need to <span class="text-gold">excel</span></h2>
-                <p class="text-slate-500 text-sm mt-3">Videos, past papers, quizzes, assignments & more — all in one Laravel-powered LMS, 24/7.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-                <div class="group bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(15,45,77,0.06)] hover:shadow-[0_16px_40px_rgba(15,45,77,0.10)] hover:-translate-y-1 transition">
-                    <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-play-circle-line"></i></div>
-                    <h3 class="font-extrabold text-navy mt-4">Video Lectures</h3>
-                    <p class="text-slate-500 text-sm mt-2">HD recorded + live classes. Rewatch anytime, 1.5x speed, notes synced.</p>
-                </div>
-                <div class="group bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(15,45,77,0.06)] hover:shadow-[0_16px_40px_rgba(15,45,77,0.10)] hover:-translate-y-1 transition">
-                    <div class="w-12 h-12 rounded-2xl bg-gold text-navy grid place-items-center text-xl"><i class="ri-file-paper-line"></i></div>
-                    <h3 class="font-extrabold text-navy mt-4">Papers & Notes</h3>
-                    <p class="text-slate-500 text-sm mt-2">Past papers, model answers & lecturer notes — searchable & printable.</p>
-                </div>
-                <div class="group bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(15,45,77,0.06)] hover:shadow-[0_16px_40px_rgba(15,45,77,0.10)] hover:-translate-y-1 transition">
-                    <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-quill-pen-line"></i></div>
-                    <h3 class="font-extrabold text-navy mt-4">Quizzes & Assignments</h3>
-                    <p class="text-slate-500 text-sm mt-2">Auto-graded quizzes, deadlines, and instant feedback from lecturers.</p>
-                </div>
-                <div class="group bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(15,45,77,0.06)] hover:shadow-[0_16px_40px_rgba(15,45,77,0.10)] hover:-translate-y-1 transition">
-                    <div class="w-12 h-12 rounded-2xl bg-gold text-navy grid place-items-center text-xl"><i class="ri-customer-service-2-line"></i></div>
-                    <h3 class="font-extrabold text-navy mt-4">And Much More</h3>
-                    <p class="text-slate-500 text-sm mt-2">Live chat, forums, certificates, GPA tracker & mobile app.</p>
+                <p class="text-slate-500 text-sm mt-3">Videos, papers, quizzes & more — all in one Laravel LMS.</p>
+                <div class="mt-8 space-y-5 relative">
+                    <div class="absolute left-[18px] top-6 bottom-6 w-px bg-slate-200 hidden sm:block"></div>
+                    <div class="relative flex gap-4">
+                        <div class="w-9 h-9 rounded-full bg-navy text-white grid place-items-center shrink-0 relative z-10"><i class="ri-play-circle-line"></i></div>
+                        <div><div class="font-extrabold text-navy">Video Lectures</div><div class="text-sm text-slate-500">HD recorded + live, 1.5x speed, notes synced.</div></div>
+                    </div>
+                    <div class="relative flex gap-4">
+                        <div class="w-9 h-9 rounded-full bg-gold text-navy grid place-items-center shrink-0 relative z-10"><i class="ri-file-paper-line"></i></div>
+                        <div><div class="font-extrabold text-navy">Papers & Notes</div><div class="text-sm text-slate-500">Past papers, model answers, searchable PDFs.</div></div>
+                    </div>
+                    <div class="relative flex gap-4">
+                        <div class="w-9 h-9 rounded-full bg-navy text-white grid place-items-center shrink-0 relative z-10"><i class="ri-quill-pen-line"></i></div>
+                        <div><div class="font-extrabold text-navy">Quizzes & Assignments</div><div class="text-sm text-slate-500">Auto-graded, instant feedback, deadlines.</div></div>
+                    </div>
+                    <div class="relative flex gap-4">
+                        <div class="w-9 h-9 rounded-full bg-gold text-navy grid place-items-center shrink-0 relative z-10"><i class="ri-customer-service-2-line"></i></div>
+                        <div><div class="font-extrabold text-navy">And Much More</div><div class="text-sm text-slate-500">Forums, certificates, GPA tracker & mobile app.</div></div>
+                    </div>
                 </div>
             </div>
         </div>
