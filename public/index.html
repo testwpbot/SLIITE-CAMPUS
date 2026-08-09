@@ -111,7 +111,7 @@
                     </div>
                     <h1 class="font-display font-extrabold text-[42px] sm:text-[50px] lg:text-[56px] leading-[0.95] tracking-[-0.03em] text-navy mt-5">
                         Your Future<br>
-                        Starts at <span class="text-navy-800">SIITE</span>
+                        Starts at <span class="text-gold">SIITE CAMPUS</span>
                     </h1>
                     <p class="text-slate-500 text-[15px] leading-7 mt-4">
                         Sri Lanka’s leading LMS for IT & English. Learn from global lecturers, work on real industry projects, and graduate with 98% employability. UGC-approved degrees, 24/7 LMS access, and guaranteed internships — all on one Laravel-powered platform built for your future.
