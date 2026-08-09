@@ -50,12 +50,8 @@
     <!-- Navbar -->
     <header class="sticky top-0 z-50 bg-white/90 glass border-b border-slate-100">
         <div class="max-w-[1280px] mx-auto px-6 py-3.5 flex items-center justify-between gap-8">
-            <a href="/" class="flex items-center gap-3">
-                <img src="/images/logo-mark.png" alt="SLIITE CAMPUS" class="h-12 w-auto object-contain">
-                <div class="hidden sm:block leading-none">
-                    <div class="font-display font-extrabold text-[22px] tracking-tight text-navy">SLIITE<span class="text-teal">.</span></div>
-                    <div class="text-[10px] tracking-[0.28em] font-bold text-gold -mt-0.5">CAMPUS</div>
-                </div>
+            <a href="/" class="flex items-center gap-2">
+                <img src="/images/logo-removebg-preview.png" alt="SIITE Campus - Synergy Institute of Information Technology" class="h-[64px] lg:h-[72px] w-auto object-contain drop-shadow-sm">
             </a>
             <nav class="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-slate-700">
                 <a href="#" class="text-navy border-b-2 border-gold pb-1">Home</a>
@@ -154,9 +150,11 @@
                     <div class="absolute top-10 right-6 w-64 h-64 bg-gold/20 blur-[80px] rounded-full"></div>
                     <div class="absolute bottom-20 left-10 w-72 h-72 bg-teal/15 blur-[90px] rounded-full"></div>
 
-                    <!-- Image container -->
+                    <!-- Image container - YOUR EXACT UPLOADED HERO -->
                     <div class="relative z-10 w-full max-w-[520px]">
-                        <img src="/images/hero-student.png" alt="SLIITE Student" class="w-full h-[520px] lg:h-[620px] object-cover object-top rounded-[28px] shadow-[0_30px_60px_rgba(15,45,77,0.15)]">
+                        <div class="w-full h-[520px] lg:h-[620px] rounded-[28px] overflow-hidden shadow-[0_30px_60px_rgba(15,45,77,0.15)] bg-[#020202] flex items-end justify-center border border-white/10">
+                            <img src="/images/hero-image-remove-bg-io.png" alt="SIITE Campus Student" class="w-full h-full object-cover object-top">
+                        </div>
 
                         <!-- Floating Card 1 -->
                         <div class="absolute -left-2 sm:-left-6 top-20 bg-white rounded-2xl shadow-[0_16px_40px_rgba(15,45,77,0.12)] p-3 flex items-center gap-3 border border-slate-100">
@@ -318,8 +316,7 @@
         <div class="max-w-[1280px] mx-auto px-6 py-12 grid md:grid-cols-4 gap-8">
             <div>
                 <div class="flex items-center gap-3">
-                    <img src="/images/logo-mark.png" class="h-10 bg-white rounded-lg p-1">
-                    <div class="font-display font-extrabold text-white leading-none">SLIITE<span class="text-teal">.</span><div class="text-[10px] tracking-[0.2em] text-gold">CAMPUS</div></div>
+                    <img src="/images/logo-removebg-preview.png" class="h-12 w-auto object-contain bg-white rounded-xl p-1.5 shadow">
                 </div>
                 <p class="text-sm text-white/60 mt-4 leading-6">Empowering futures through world-class education & cutting-edge Learning Management System.</p>
             </div>
