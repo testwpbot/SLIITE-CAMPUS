@@ -38,8 +38,7 @@
         .btn-shine:hover::after { transform: translateX(200%); }
         .nav-link { position: relative; padding-bottom: 4px; }
         .nav-link::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: #FFB703; transition: width 0.28s ease; }
-        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
-        .nav-link.active { color: #0F2D4D; }
+        .nav-link:hover::after { width: 100%; }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
@@ -64,10 +63,10 @@
     <header class="sticky top-0 z-50 bg-white/90 glass border-b border-slate-200/60 shadow-[0_2px_24px_rgba(15,45,77,0.06)]">
         <div class="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center">
             <a href="/" class="flex items-center shrink-0">
-                <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[50px] w-auto object-contain">
+                <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[62px] lg:h-[72px] w-auto object-contain">
             </a>
             <nav class="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-slate-700 mx-auto">
-                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Home</a>
                 <a href="#" class="nav-link flex items-center gap-1">Programs <i class="ri-arrow-down-s-line text-slate-400 text-[16px]"></i></a>
                 <a href="#" class="nav-link">About</a>
                 <a href="#" class="nav-link">LMS</a>
