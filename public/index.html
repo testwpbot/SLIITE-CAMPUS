@@ -25,7 +25,7 @@
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: auto; }
         .glass { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
         .hero-bg { background: radial-gradient(ellipse at 72% 18%, rgba(14,159,156,0.10) 0%, transparent 55%), radial-gradient(ellipse at 8% 85%, rgba(212,160,23,0.07) 0%, transparent 50%), linear-gradient(180deg, #F8FBFC 0%, #EEF4F6 100%); }
         .hero-card { background: linear-gradient(180deg, #020203 0%, #0A0A0A 50%, #111111 100%); box-shadow: 0 25px 80px -12px rgba(2,6,23,0.35), 0 0 0 1px rgba(255,255,255,0.06) inset; }
@@ -40,6 +40,12 @@
         .nav-link { position: relative; padding-bottom: 4px; }
         .nav-link::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: #FFB703; transition: width 0.28s ease; }
         .nav-link:hover::after { width: 100%; }
+        /* Lenis smooth scroll — exact from Parametric Surface CodePen */
+        html.lenis, html.lenis body { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+        .lenis.lenis-scrolling iframe { pointer-events: none; }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
@@ -331,18 +337,12 @@
             onScroll();
         })();
     </script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <!-- Lenis — exact scroll animation from CodePen (only scroll, no 3D) -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script>
-        // Smooth but snappy — faster, less delay on wheel
-        const lenis = new Lenis({ duration: 0.65, wheelMultiplier: 1.15, touchMultiplier: 1.6, easing: (t) => 1 - Math.pow(1 - t, 3), smoothWheel: true, syncTouch: true });
+        const lenis = new Lenis();
         function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
-        document.querySelectorAll('a[href^=\"#\"]').forEach(a=>{
-            a.addEventListener('click', (e)=>{
-                const id=a.getAttribute('href');
-                if(id.length>1){ e.preventDefault(); lenis.scrollTo(document.querySelector(id), {duration: 0.8}); }
-            });
-        });
     </script>
 </body>
 </html>
