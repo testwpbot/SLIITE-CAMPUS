@@ -49,9 +49,8 @@
         /* Anti-glitch: promote sticky header + reduce repaint */
         #mainHeader { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
         .no-glitch { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
-        /* Typewriter */
-        .typewriter-wrap { display: inline; }
-        #typewriter { border-right: 3px solid #FFB703; padding-right: 3px; animation: blink 0.75s step-end infinite; }
+        /* Typewriter cursor */
+        #rotateWord { animation: blink 0.75s step-end infinite; }
         @keyframes blink { 0%,50% { border-color: #FFB703; } 51%,100% { border-color: transparent; } }
     </style>
 </head>
@@ -117,8 +116,9 @@
                     </div>
                     <h1 class="font-display font-extrabold text-[42px] sm:text-[50px] lg:text-[56px] leading-[0.95] tracking-[-0.03em] text-navy mt-5">
                         Your Future<br>
-                        Starts at <span class="typewriter-wrap"><span id="typewriter" class="text-gold"></span></span>
+                        Starts at <span class="text-gold">SIITE CAMPUS</span>
                     </h1>
+                    <div class="mt-3 text-[18px] font-bold text-slate-700">Polish your knowledge with our <span id="rotateWord" class="text-gold border-r-[3px] border-gold pr-1"></span></div>
                     <p class="text-slate-500 text-[15px] leading-7 mt-4">
                         Sri Lanka’s leading LMS for IT & English. Learn from global lecturers, work on real industry projects, and graduate with 98% employability. UGC-approved degrees, 24/7 LMS access, and guaranteed internships — all on one Laravel-powered platform built for your future.
                     </p>
@@ -352,22 +352,25 @@
         const lenis = new Lenis();
         function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
-        // Typewriter — proper title: types once and holds (no loop)
+        // Rotating typewriter — courses → assignments → quizzes ...
         (function(){
-            const el = document.getElementById('typewriter');
-            const text = 'SIITE CAMPUS';
-            let i = 0;
-            function type(){
-                if(i <= text.length){
-                    el.textContent = text.slice(0, i);
+            const el = document.getElementById('rotateWord');
+            const words = ['Courses', 'Assignments', 'Quizzes', 'Degrees', 'Diplomas'];
+            let w = 0, i = 0, del = false;
+            function tick(){
+                const word = words[w];
+                if(!del){
+                    el.textContent = word.slice(0, i+1);
                     i++;
-                    setTimeout(type, 110);
+                    if(i === word.length){ setTimeout(()=>{ del = true; tick(); }, 1400); return; }
                 } else {
-                    // keep cursor blinking, no erase
-                    el.style.borderRightColor = '#FFB703';
+                    el.textContent = word.slice(0, i-1);
+                    i--;
+                    if(i === 0){ del = false; w = (w+1)%words.length; }
                 }
+                setTimeout(tick, del ? 45 : 110);
             }
-            type();
+            tick();
         })();
     </script>
 </body>
