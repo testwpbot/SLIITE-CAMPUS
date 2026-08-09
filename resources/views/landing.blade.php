@@ -245,46 +245,55 @@
         })();
     </script>
 
-    <!-- Why SIITE — LMS Focus: Art style, no image -->
-    <section class="bg-white py-16 overflow-hidden">
-        <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
-            <!-- Left: Pure CSS art — LMS feature orbit -->
-            <div class="relative flex items-center justify-center py-8">
-                <div class="absolute inset-0 bg-gradient-to-br from-navy/[0.04] to-gold/[0.05] rounded-[32px]"></div>
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] border border-slate-200 rounded-full opacity-30"></div>
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] border border-dashed border-slate-300 rounded-full opacity-40"></div>
-                <!-- center -->
-                <div class="relative w-[88px] h-[88px] rounded-2xl bg-navy text-white grid place-items-center text-3xl shadow-xl z-10"><i class="ri-graduation-cap-fill"></i></div>
-                <!-- orbit items -->
-                <div class="absolute top-[12%] left-[18%] w-16 h-16 rounded-2xl bg-white shadow-lg border border-slate-100 grid place-items-center text-navy text-xl"><i class="ri-play-circle-line"></i></div>
-                <div class="absolute top-[12%] right-[18%] w-16 h-16 rounded-2xl bg-gold shadow-lg grid place-items-center text-navy text-xl"><i class="ri-file-paper-line"></i></div>
-                <div class="absolute bottom-[12%] left-[18%] w-16 h-16 rounded-2xl bg-white shadow-lg border border-slate-100 grid place-items-center text-gold text-xl"><i class="ri-quill-pen-line"></i></div>
-                <div class="absolute bottom-[12%] right-[18%] w-16 h-16 rounded-2xl bg-navy shadow-lg grid place-items-center text-white text-xl"><i class="ri-customer-service-2-line"></i></div>
-                <div class="absolute left-1/2 -translate-x-1/2 top-[4%] bg-white rounded-full px-3 py-1 text-xs font-extrabold shadow border">Videos</div>
-                <div class="absolute left-1/2 -translate-x-1/2 bottom-[4%] bg-white rounded-full px-3 py-1 text-xs font-extrabold shadow border">Support</div>
+    <!-- Why SIITE — LMS Focus: Art style, no image — REDESIGNED premium -->
+    <section class="bg-[#F8FBFD] py-16 overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left: Art — premium feature orbit, larger & balanced -->
+            <div class="relative bg-white rounded-[32px] p-8 lg:p-10 shadow-[0_20px_60px_rgba(15,45,77,0.08)] border border-slate-100 overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-[280px] h-[280px] bg-gold/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-[320px] h-[320px] bg-navy/[0.05] rounded-full blur-3xl"></div>
+                <div class="relative grid grid-cols-2 gap-5">
+                    <div class="bg-gradient-to-br from-navy to-[#1a3a5f] rounded-2xl p-5 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+                        <i class="ri-play-circle-line text-3xl"></i>
+                        <div class="font-extrabold mt-8">Videos</div>
+                        <div class="text-white/70 text-xs mt-1">1,200+ HD lectures</div>
+                    </div>
+                    <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-gold text-navy grid place-items-center text-xl"><i class="ri-file-paper-line"></i></div>
+                        <div class="font-extrabold text-navy mt-4">Papers</div>
+                        <div class="text-slate-500 text-xs mt-1">500+ past papers</div>
+                    </div>
+                    <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-navy text-white grid place-items-center text-xl"><i class="ri-quill-pen-line"></i></div>
+                        <div class="font-extrabold text-navy mt-4">Quizzes</div>
+                        <div class="text-slate-500 text-xs mt-1">Auto-graded</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-gold to-[#FFC933] rounded-2xl p-5 text-navy relative overflow-hidden">
+                        <i class="ri-customer-service-2-line text-3xl"></i>
+                        <div class="font-extrabold mt-8">Support</div>
+                        <div class="text-navy/70 text-xs mt-1">24/7 help</div>
+                    </div>
+                </div>
+                <div class="mt-6 flex items-center justify-center gap-2 text-xs font-bold text-slate-500"><span class="w-2 h-2 rounded-full bg-teal animate-pulse"></span> Live sync across all devices</div>
             </div>
-            <!-- Right: features timeline -->
+            <!-- Right: features -->
             <div>
                 <div class="inline-flex items-center gap-2 bg-navy text-white rounded-full px-4 py-1.5 text-xs font-extrabold tracking-widest">WHY SIITE LMS</div>
                 <h2 class="font-display font-extrabold text-[32px] lg:text-[38px] leading-tight text-navy mt-4">Everything you need to <span class="text-gold">excel</span></h2>
                 <p class="text-slate-500 text-sm mt-3">Videos, papers, quizzes & more — all in one Laravel LMS.</p>
-                <div class="mt-8 space-y-5 relative">
-                    <div class="absolute left-[18px] top-6 bottom-6 w-px bg-slate-200 hidden sm:block"></div>
-                    <div class="relative flex gap-4">
-                        <div class="w-9 h-9 rounded-full bg-navy text-white grid place-items-center shrink-0 relative z-10"><i class="ri-play-circle-line"></i></div>
+                <div class="mt-8 space-y-4">
+                    <div class="flex gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-sm border border-transparent hover:border-slate-100 transition">
+                        <div class="w-10 h-10 rounded-full bg-navy text-white grid place-items-center shrink-0"><i class="ri-play-circle-line"></i></div>
                         <div><div class="font-extrabold text-navy">Video Lectures</div><div class="text-sm text-slate-500">HD recorded + live, 1.5x speed, notes synced.</div></div>
                     </div>
-                    <div class="relative flex gap-4">
-                        <div class="w-9 h-9 rounded-full bg-gold text-navy grid place-items-center shrink-0 relative z-10"><i class="ri-file-paper-line"></i></div>
+                    <div class="flex gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-sm border border-transparent hover:border-slate-100 transition">
+                        <div class="w-10 h-10 rounded-full bg-gold text-navy grid place-items-center shrink-0"><i class="ri-file-paper-line"></i></div>
                         <div><div class="font-extrabold text-navy">Papers & Notes</div><div class="text-sm text-slate-500">Past papers, model answers, searchable PDFs.</div></div>
                     </div>
-                    <div class="relative flex gap-4">
-                        <div class="w-9 h-9 rounded-full bg-navy text-white grid place-items-center shrink-0 relative z-10"><i class="ri-quill-pen-line"></i></div>
+                    <div class="flex gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-sm border border-transparent hover:border-slate-100 transition">
+                        <div class="w-10 h-10 rounded-full bg-navy text-white grid place-items-center shrink-0"><i class="ri-quill-pen-line"></i></div>
                         <div><div class="font-extrabold text-navy">Quizzes & Assignments</div><div class="text-sm text-slate-500">Auto-graded, instant feedback, deadlines.</div></div>
-                    </div>
-                    <div class="relative flex gap-4">
-                        <div class="w-9 h-9 rounded-full bg-gold text-navy grid place-items-center shrink-0 relative z-10"><i class="ri-customer-service-2-line"></i></div>
-                        <div><div class="font-extrabold text-navy">And Much More</div><div class="text-sm text-slate-500">Forums, certificates, GPA tracker & mobile app.</div></div>
                     </div>
                 </div>
             </div>
