@@ -29,6 +29,13 @@
         .hero-bg { background: radial-gradient(ellipse at 72% 18%, rgba(14,159,156,0.10) 0%, transparent 55%), radial-gradient(ellipse at 8% 85%, rgba(212,160,23,0.07) 0%, transparent 50%), linear-gradient(180deg, #F8FBFC 0%, #EEF4F6 100%); }
         .hero-card { background: linear-gradient(180deg, #020203 0%, #0A0A0A 50%, #111111 100%); box-shadow: 0 25px 80px -12px rgba(2,6,23,0.35), 0 0 0 1px rgba(255,255,255,0.06) inset; }
         .gold-ring { box-shadow: 0 0 0 1px rgba(212,160,23,0.25), 0 20px 60px rgba(2,6,23,0.15); }
+        @keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(200%); } }
+        .float-slow { animation: floatY 4s ease-in-out infinite; }
+        .float-slow-2 { animation: floatY 5s ease-in-out infinite 0.8s; }
+        .btn-shine { position: relative; overflow: hidden; }
+        .btn-shine::after { content: ''; position: absolute; top: 0; left: 0; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); transform: translateX(-100%); transition: transform 0.6s; }
+        .btn-shine:hover::after { transform: translateX(200%); }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
@@ -107,11 +114,11 @@
                     </ul>
 
                     <div class="mt-7 flex flex-wrap items-center gap-3">
-                        <a href="#" class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-[#0A2342] text-white font-extrabold px-8 h-[50px] rounded-full text-sm shadow-[0_12px_24px_rgba(15,45,77,0.18)] transition">
-                            Apply Now — Free <i class="ri-arrow-right-line"></i>
+                        <a href="#" class="btn-shine inline-flex items-center justify-center gap-2 bg-navy hover:bg-[#0A2342] text-white font-extrabold px-8 h-[50px] rounded-full text-sm shadow-[0_12px_24px_rgba(15,45,77,0.18)] transition hover:scale-[1.02] hover:shadow-[0_16px_32px_rgba(15,45,77,0.22)] active:scale-[0.98]">
+                            Apply Now — Free <i class="ri-arrow-right-line transition group-hover:translate-x-1"></i>
                         </a>
-                        <a href="#" class="inline-flex items-center gap-2 bg-white border border-slate-200 text-navy font-bold px-6 h-[50px] rounded-full text-sm shadow-sm">
-                            <span class="w-8 h-8 rounded-full bg-gold text-white grid place-items-center"><i class="ri-play-fill"></i></span> Tour Campus
+                        <a href="#" class="group inline-flex items-center gap-2 bg-white border border-slate-200 text-navy font-bold px-6 h-[50px] rounded-full text-sm shadow-sm hover:shadow-md hover:border-slate-300 hover:bg-slate-50 transition active:scale-[0.98]">
+                            <span class="w-8 h-8 rounded-full bg-gold text-white grid place-items-center group-hover:rotate-[10deg] group-hover:scale-110 transition"><i class="ri-play-fill"></i></span> Tour Campus
                         </a>
                     </div>
 
@@ -129,29 +136,29 @@
                     </div>
                 </div>
 
-                <!-- Right — New person placement: centered in soft frame, not floating randomly -->
+                <!-- Right — polished: animated frame, glow, floating cards -->
                 <div class="relative flex justify-center lg:justify-end items-end">
-                    <!-- soft card behind person -->
-                    <div class="relative w-[380px] lg:w-[480px] h-[520px] lg:h-[580px]">
-                        <!-- background shape -->
-                        <div class="absolute inset-0 bg-gradient-to-b from-[#E6F5F5] to-[#FFF7E0] rounded-[36px] border border-white shadow-[0_24px_60px_rgba(15,45,77,0.12)] overflow-hidden"></div>
-                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-gold rounded-2xl rotate-12 opacity-90 hidden lg:block"></div>
-                        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-teal rounded-xl -rotate-12 opacity-90 hidden lg:block"></div>
-                        <!-- person -->
-                        <img src="/images/hero-image-remove-bg-io.png" alt="SIITE Student" class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[360px] lg:w-[420px] h-auto object-contain object-bottom">
+                    <!-- soft card behind person — with hover lift -->
+                    <div class="relative w-[380px] lg:w-[480px] h-[520px] lg:h-[580px] group">
+                        <!-- background shape with gradient border -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-[#E6F5F5] to-[#FFF7E0] rounded-[36px] border border-white shadow-[0_24px_60px_rgba(15,45,77,0.12)] overflow-hidden group-hover:shadow-[0_32px_80px_rgba(15,45,77,0.16)] transition-shadow duration-500"></div>
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-gold rounded-2xl rotate-12 opacity-90 hidden lg:block shadow-lg group-hover:rotate-6 group-hover:scale-105 transition duration-500"></div>
+                        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-teal rounded-xl -rotate-12 opacity-90 hidden lg:block shadow-lg group-hover:rotate-6 transition duration-500"></div>
+                        <!-- person with subtle hover -->
+                        <img src="/images/hero-image-remove-bg-io.png" alt="SIITE Student" class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[360px] lg:w-[420px] h-auto object-contain object-bottom drop-shadow-[0_20px_40px_rgba(15,45,77,0.12)] group-hover:drop-shadow-[0_28px_56px_rgba(15,45,77,0.18)] transition duration-500">
 
-                        <!-- Floating stats — FIXED positions, not random -->
-                        <div class="absolute -left-4 lg:-left-8 top-[18%] bg-white rounded-2xl shadow-[0_16px_36px_rgba(15,45,77,0.12)] px-4 py-3 flex items-center gap-3 border border-slate-100">
-                            <div class="w-10 h-10 rounded-xl bg-teal text-white grid place-items-center"><i class="ri-graduation-cap-fill text-lg"></i></div>
+                        <!-- Floating stats — with float animation -->
+                        <div class="float-slow absolute -left-4 lg:-left-8 top-[18%] bg-white rounded-2xl shadow-[0_16px_36px_rgba(15,45,77,0.12)] px-4 py-3 flex items-center gap-3 border border-slate-100 hover:shadow-[0_20px_44px_rgba(15,45,77,0.16)] transition">
+                            <div class="w-10 h-10 rounded-xl bg-teal text-white grid place-items-center shadow-sm"><i class="ri-graduation-cap-fill text-lg"></i></div>
                             <div><div class="text-xs text-slate-500 font-bold">Course</div><div class="text-sm font-extrabold text-navy">BSc Software Eng.</div></div>
                         </div>
-                        <div class="absolute -right-4 lg:-right-6 bottom-[22%] bg-white rounded-2xl shadow-[0_16px_36px_rgba(15,45,77,0.12)] p-4 w-[260px] border border-slate-100">
-                            <div class="flex items-center justify-between"><span class="text-xs font-extrabold tracking-widest text-navy">PROGRESS</span><span class="text-xs font-bold text-teal bg-teal-50 px-2 py-0.5 rounded-full">LIVE</span></div>
+                        <div class="float-slow-2 absolute -right-4 lg:-right-6 bottom-[22%] bg-white rounded-2xl shadow-[0_16px_36px_rgba(15,45,77,0.12)] p-4 w-[260px] border border-slate-100 hover:shadow-[0_20px_44px_rgba(15,45,77,0.16)] transition">
+                            <div class="flex items-center justify-between"><span class="text-xs font-extrabold tracking-widest text-navy">PROGRESS</span><span class="text-xs font-bold text-teal bg-teal-50 px-2 py-0.5 rounded-full animate-pulse">LIVE</span></div>
                             <div class="mt-3 space-y-2">
                                 <div class="flex justify-between text-xs font-bold"><span>Data Structures</span><span class="text-teal">85%</span></div>
-                                <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-teal" style="width:85%"></div></div>
+                                <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-teal rounded-full" style="width:85%"></div></div>
                                 <div class="flex justify-between text-xs font-bold"><span>Web Dev</span><span class="text-gold">72%</span></div>
-                                <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-gold" style="width:72%"></div></div>
+                                <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-gold rounded-full" style="width:72%"></div></div>
                             </div>
                         </div>
                     </div>
