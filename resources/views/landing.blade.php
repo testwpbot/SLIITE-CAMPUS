@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SLIITE CAMPUS — Learn. Lead. Succeed.</title>
+    <title>SIITE CAMPUS — Synergy Institute of Information Technology</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
@@ -26,7 +26,9 @@
     </script>
     <style>
         .glass { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
-        .hero-bg { background: radial-gradient(ellipse at 70% 30%, rgba(20,184,176,0.08) 0%, transparent 60%), radial-gradient(ellipse at 10% 80%, rgba(255,183,3,0.07) 0%, transparent 50%), linear-gradient(180deg, #F8FAFB 0%, #F1F5F9 100%); }
+        .hero-bg { background: radial-gradient(ellipse at 72% 18%, rgba(14,159,156,0.10) 0%, transparent 55%), radial-gradient(ellipse at 8% 85%, rgba(212,160,23,0.07) 0%, transparent 50%), linear-gradient(180deg, #F8FBFC 0%, #EEF4F6 100%); }
+        .hero-card { background: linear-gradient(180deg, #020203 0%, #0A0A0A 50%, #111111 100%); box-shadow: 0 25px 80px -12px rgba(2,6,23,0.35), 0 0 0 1px rgba(255,255,255,0.06) inset; }
+        .gold-ring { box-shadow: 0 0 0 1px rgba(212,160,23,0.25), 0 20px 60px rgba(2,6,23,0.15); }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
@@ -35,7 +37,7 @@
         <div class="max-w-[1280px] mx-auto px-6 py-2.5 flex justify-between items-center">
             <div class="flex items-center gap-6">
                 <span class="flex items-center gap-2"><i class="ri-phone-line text-teal-light"></i> +94 11 754 4801</span>
-                <span class="flex items-center gap-2"><i class="ri-mail-line text-teal-light"></i> info@sliite.lk</span>
+                <span class="flex items-center gap-2"><i class="ri-mail-line text-teal-light"></i> info@siite.lk</span>
                 <span class="flex items-center gap-2"><i class="ri-map-pin-line text-teal-light"></i> Malabe, Colombo, Sri Lanka</span>
             </div>
             <div class="flex items-center gap-3">
@@ -47,11 +49,11 @@
         </div>
     </div>
 
-    <!-- Navbar -->
-    <header class="sticky top-0 z-50 bg-white/90 glass border-b border-slate-100">
-        <div class="max-w-[1280px] mx-auto px-6 py-3.5 flex items-center justify-between gap-8">
-            <a href="/" class="flex items-center gap-2">
-                <img src="/images/logo-removebg-preview.png" alt="SIITE Campus - Synergy Institute of Information Technology" class="h-[64px] lg:h-[72px] w-auto object-contain drop-shadow-sm">
+    <!-- Navbar — polished: tighter, premium shadow, logo breathing room -->
+    <header class="sticky top-0 z-50 bg-white/85 glass border-b border-slate-200/60 shadow-[0_1px_20px_rgba(15,45,77,0.06)]">
+        <div class="max-w-[1280px] mx-auto px-6 py-2.5 flex items-center justify-between gap-8">
+            <a href="/" class="flex items-center gap-3 shrink-0">
+                <img src="/images/logo-removebg-preview.png" alt="SIITE Campus - Synergy Institute of Information Technology" class="h-[52px] lg:h-[58px] w-auto object-contain">
             </a>
             <nav class="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-slate-700">
                 <a href="#" class="text-navy border-b-2 border-gold pb-1">Home</a>
@@ -83,26 +85,26 @@
                         <span class="w-6 h-6 rounded-full bg-navy text-white grid place-items-center"><i class="ri-arrow-right-line"></i></span>
                     </div>
 
-                    <h1 class="font-display font-extrabold text-[38px] sm:text-[48px] lg:text-[56px] leading-[0.95] tracking-tight text-navy mt-6">
+                    <h1 class="font-display font-extrabold text-[38px] sm:text-[48px] lg:text-[54px] leading-[0.92] tracking-[-0.03em] text-navy mt-6">
                         Shape Your<br>
                         <span class="relative inline-block">Future
-                            <span class="absolute left-0 -bottom-2 w-full h-3 bg-gold/30 -rotate-1"></span>
+                            <span class="absolute left-0 -bottom-1.5 w-full h-[9px] bg-[#FDE68A] -rotate-1 opacity-80"></span>
                         </span>
                         <span class="text-slate-900"> with</span><br>
-                        <span class="bg-gradient-to-r from-teal to-navy bg-clip-text text-transparent">SLIITE CAMPUS</span>
+                        <span class="bg-gradient-to-r from-[#0E9F9C] to-[#0A2342] bg-clip-text text-transparent">SIITE CAMPUS</span>
                     </h1>
                     <p class="text-slate-500 text-[15px] leading-7 mt-5 max-w-[520px]">
-                        Sri Lanka's most innovative Learning Management System. Industry-aligned degrees, global qualified lecturers & 98% graduate employability.
+                        Sri Lanka’s most trusted LMS — Synergy Institute of Information Technology & English. Industry-aligned degrees, global lecturers & 98% graduate employability.
                     </p>
 
-                    <!-- Search / CTA -->
+                    <!-- Search / CTA — polished pill -->
                     <div class="mt-7 flex flex-col sm:flex-row gap-3 max-w-[560px]">
-                        <div class="flex-1 flex items-center gap-3 bg-white rounded-full shadow-[0_8px_30px_rgba(15,45,77,0.08)] border border-slate-200 px-4 py-2">
-                            <i class="ri-search-line text-slate-400 text-xl"></i>
-                            <input placeholder="Search course e.g. Software Engineering" class="flex-1 outline-none text-sm placeholder:text-slate-400">
-                            <button class="hidden sm:inline-flex bg-navy text-white rounded-full p-2.5 hover:bg-navy-700"><i class="ri-search-line"></i></button>
+                        <div class="flex-1 flex items-center gap-3 bg-white rounded-full shadow-[0_8px_24px_rgba(15,45,77,0.07)] border border-slate-200/80 px-2 py-1.5 pl-4">
+                            <i class="ri-search-line text-slate-400 text-[18px]"></i>
+                            <input placeholder="Search course e.g. Software Engineering" class="flex-1 outline-none text-[14px] placeholder:text-slate-400 bg-transparent">
+                            <button class="hidden sm:inline-flex bg-navy hover:bg-navy-800 text-white rounded-full w-9 h-9 grid place-items-center shrink-0 transition"><i class="ri-search-line"></i></button>
                         </div>
-                        <a href="#" class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-navy-700 text-white font-bold px-7 py-3.5 rounded-full text-sm shadow-lg">
+                        <a href="#" class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-[#0A2342] text-white font-bold px-7 py-3.5 rounded-full text-sm shadow-[0_10px_22px_rgba(15,45,77,0.18)] transition">
                             Explore Programs
                         </a>
                     </div>
@@ -150,14 +152,18 @@
                     <div class="absolute top-10 right-6 w-64 h-64 bg-gold/20 blur-[80px] rounded-full"></div>
                     <div class="absolute bottom-20 left-10 w-72 h-72 bg-teal/15 blur-[90px] rounded-full"></div>
 
-                    <!-- Image container - YOUR EXACT UPLOADED HERO -->
+                    <!-- Image container — POLISHED: soft gold top-border, refined shadow, image not harsh -->
                     <div class="relative z-10 w-full max-w-[520px]">
-                        <div class="w-full h-[520px] lg:h-[620px] rounded-[28px] overflow-hidden shadow-[0_30px_60px_rgba(15,45,77,0.15)] bg-[#020202] flex items-end justify-center border border-white/10">
-                            <img src="/images/hero-image-remove-bg-io.png" alt="SIITE Campus Student" class="w-full h-full object-cover object-top">
+                        <div class="w-full h-[520px] lg:h-[620px] rounded-[28px] overflow-hidden hero-card relative gold-ring">
+                            <!-- subtle gold top accent -->
+                            <div class="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-70"></div>
+                            <!-- soft vignette so black doesn't feel flat -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                            <img src="/images/hero-image-remove-bg-io.png" alt="SIITE Campus Student" class="w-full h-full object-cover object-top object-center scale-[1.02]">
                         </div>
 
-                        <!-- Floating Card 1 -->
-                        <div class="absolute -left-2 sm:-left-6 top-20 bg-white rounded-2xl shadow-[0_16px_40px_rgba(15,45,77,0.12)] p-3 flex items-center gap-3 border border-slate-100">
+                        <!-- Floating Card 1 — glass polish -->
+                        <div class="absolute -left-2 sm:-left-6 top-20 bg-white/95 backdrop-blur rounded-2xl shadow-[0_16px_40px_rgba(15,45,77,0.14)] p-3 flex items-center gap-3 border border-white">
                             <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal grid place-items-center text-xl"><i class="ri-graduation-cap-fill"></i></div>
                             <div>
                                 <div class="text-xs text-slate-500 font-semibold">Enrolled Course</div>
@@ -166,8 +172,8 @@
                             <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
                         </div>
 
-                        <!-- Floating Card 2 - LMS -->
-                        <div class="absolute -right-2 sm:-right-4 bottom-28 bg-white rounded-2xl shadow-[0_16px_40px_rgba(15,45,77,0.12)] p-4 border border-slate-100 w-[280px]">
+                        <!-- Floating Card 2 - LMS — polished -->
+                        <div class="absolute -right-2 sm:-right-4 bottom-28 bg-white/95 backdrop-blur rounded-2xl shadow-[0_16px_40px_rgba(15,45,77,0.14)] p-4 border border-white w-[280px]">
                             <div class="flex items-center justify-between mb-3">
                                 <div class="text-xs font-extrabold tracking-widest text-navy flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal"></span> MY LMS</div>
                                 <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2 py-1 rounded-full">Live</span>
@@ -185,8 +191,8 @@
                             <div class="mt-3 flex items-center gap-2 text-xs font-bold text-navy"><i class="ri-play-circle-fill text-teal text-lg"></i> Next: Live Lecture - Today 6 PM</div>
                         </div>
 
-                        <!-- Floating badge -->
-                        <div class="absolute left-1/2 -translate-x-1/2 bottom-4 bg-navy text-white rounded-full px-5 py-2.5 flex items-center gap-3 shadow-xl">
+                        <!-- Floating badge — softer, not harsh navy pill -->
+                        <div class="absolute left-1/2 -translate-x-1/2 bottom-5 bg-navy/95 backdrop-blur text-white rounded-full px-5 py-2.5 flex items-center gap-3 shadow-[0_12px_30px_rgba(2,6,23,0.35)] border border-white/10">
                             <span class="w-8 h-8 rounded-full bg-white/15 grid place-items-center"><i class="ri-award-fill text-gold"></i></span>
                             <div class="text-sm leading-none">
                                 <div class="font-extrabold">#1 Ranked</div>
@@ -241,14 +247,14 @@
         </div>
     </section>
 
-    <!-- Why SLIITE -->
+    <!-- Why SIITE -->
     <section class="bg-slate-50 py-14">
         <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
             <div class="relative">
                 <div class="bg-navy rounded-[28px] p-8 text-white overflow-hidden relative">
                     <div class="absolute -right-10 -top-10 w-64 h-64 bg-teal/20 blur-3xl rounded-full"></div>
                     <div class="relative">
-                        <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 text-xs font-bold tracking-widest">WHY SLIITE CAMPUS</div>
+                        <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 text-xs font-bold tracking-widest">WHY SIITE CAMPUS</div>
                         <h3 class="font-display font-extrabold text-3xl leading-none mt-4">More than a<br>Degree.</h3>
                         <ul class="mt-6 space-y-4">
                             <li class="flex gap-3"><span class="w-8 h-8 rounded-full bg-teal grid place-items-center text-sm flex-shrink-0"><i class="ri-check-line"></i></span><div><div class="font-bold">Smart LMS 24/7 Access</div><div class="text-white/70 text-sm">Recorded lectures, assignments, quizzes & live classes on one platform.</div></div></li>
@@ -326,7 +332,7 @@
             </div>
             <div>
                 <div class="font-extrabold text-white">Contact</div>
-                <ul class="mt-4 space-y-2 text-sm text-white/60"><li>New Kandy Road, Malabe</li><li>+94 11 754 4801</li><li>info@sliite.lk</li></ul>
+                <ul class="mt-4 space-y-2 text-sm text-white/60"><li>New Kandy Road, Malabe</li><li>+94 11 754 4801</li><li>info@siite.lk</li></ul>
             </div>
             <div>
                 <div class="font-extrabold text-white">Stay Updated</div>
@@ -334,7 +340,7 @@
             </div>
         </div>
         <div class="border-t border-white/10 max-w-[1280px] mx-auto px-6 py-4 flex flex-wrap justify-between gap-4 text-xs text-white/50">
-            <span>© 2026 SLIITE CAMPUS. All rights reserved.</span>
+            <span>© 2026 SIITE CAMPUS. All rights reserved.</span>
             <span>Built with Laravel 11 • Crafted for Sri Lanka</span>
         </div>
     </footer>
