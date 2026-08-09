@@ -73,71 +73,91 @@
         </div>
     </header>
 
-    <!-- HERO — SkillCraft style: person floating, doodles, no dark card — POLISHED -->
-    <section class="relative overflow-hidden bg-gradient-to-br from-[#F0FAF8] via-white to-[#FFF8F0]">
-        <!-- Line-art doodles — slightly more visible -->
-        <div class="absolute inset-0 z-0 pointer-events-none">
-            <i class="ri-ruler-line absolute top-[12%] left-[2%] text-[28px] text-slate-500/20 rotate-12"></i>
-            <i class="ri-global-line absolute bottom-[10%] left-[1.5%] text-[58px] text-slate-500/12"></i>
-            <i class="ri-book-open-line absolute bottom-[38%] left-[38%] text-[36px] text-slate-400/12 rotate-12 hidden lg:block"></i>
-            <i class="ri-compass-3-line absolute top-[45%] left-[44%] text-[22px] text-slate-400/15 rotate-12 hidden lg:block"></i>
+    <!-- HERO — COMPLETELY REDESIGNED (premium, clean, balanced) -->
+    <section class="relative overflow-hidden bg-white">
+        <!-- New background art — geometric, clean, SIITE palette -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#F7FBFC] to-white"></div>
+            <!-- large soft shape behind person -->
+            <div class="absolute -right-32 top-1/2 -translate-y-1/2 w-[720px] h-[720px] bg-gradient-to-br from-teal/[0.08] to-gold/[0.07] rounded-full blur-3xl"></div>
+            <div class="absolute right-[8%] top-[12%] w-[420px] h-[420px] bg-navy/[0.04] rounded-[48px] rotate-12"></div>
+            <!-- subtle grid -->
+            <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(#0F2D4D 1px, transparent 1px), linear-gradient(90deg, #0F2D4D 1px, transparent 1px); background-size: 40px 40px;"></div>
         </div>
 
-        <div class="relative z-10 max-w-[1280px] mx-auto px-6 pt-6 lg:pt-8 pb-0">
-            <div class="grid lg:grid-cols-2 gap-8 items-start">
-                <!-- Left — polished spacing -->
-                <div class="pb-8 lg:pb-10 pt-2">
-                    <h1 class="font-display font-extrabold text-[40px] sm:text-[48px] lg:text-[54px] leading-[0.98] tracking-[-0.03em] text-[#0F2D4D]">
-                        Shape Your <span class="text-[#E8A500]">Future</span><br>
-                        with <span class="text-[#0E9F9C]">SIITE CAMPUS</span>
+        <div class="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-10 items-center pt-8 lg:pt-10 pb-0">
+                <!-- Left -->
+                <div class="max-w-[560px]">
+                    <div class="inline-flex items-center gap-2 bg-teal-50 border border-teal-100 rounded-full px-4 py-1.5 text-xs font-bold text-teal">
+                        <span class="w-2 h-2 rounded-full bg-teal animate-pulse"></span>
+                        Admissions Open 2026 — Limited Seats
+                    </div>
+                    <h1 class="font-display font-extrabold text-[42px] sm:text-[50px] lg:text-[56px] leading-[0.95] tracking-[-0.03em] text-navy mt-5">
+                        Your Future<br>
+                        Starts at <span class="text-teal">SIITE</span>
                     </h1>
-                    <p class="text-slate-500 text-[14.5px] leading-7 mt-5 max-w-[520px]">
-                        Join thousands of learners and unlock success with expert-led programs at SIITE Campus. Learn at your pace and gain valuable skills for career growth!
+                    <p class="text-slate-500 text-[15px] leading-7 mt-4">
+                        Sri Lanka’s leading LMS for IT & English. Global lecturers, industry projects, and <span class="font-bold text-navy">98% employability</span> — all on one Laravel-powered platform.
                     </p>
 
                     <div class="mt-7 flex flex-wrap items-center gap-3">
-                        <a href="#" class="inline-flex items-center justify-center bg-[#0E9F9C] hover:bg-[#0B8A87] text-white font-extrabold px-7 h-[46px] rounded-full text-sm shadow-[0_8px_20px_rgba(14,159,156,0.25)] transition">Get Started Now</a>
-                        <a href="#" class="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 text-navy font-bold pl-1.5 pr-5 h-[46px] rounded-full text-sm shadow-sm">
-                            <span class="w-9 h-9 rounded-full bg-[#FFB703] text-white grid place-items-center shrink-0"><i class="ri-play-fill text-lg ml-0.5"></i></span>
-                            How It Works
+                        <a href="#" class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-[#0A2342] text-white font-extrabold px-8 h-[50px] rounded-full text-sm shadow-[0_12px_24px_rgba(15,45,77,0.18)] transition">
+                            Apply Now — Free <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-2 bg-white border border-slate-200 text-navy font-bold px-6 h-[50px] rounded-full text-sm shadow-sm">
+                            <span class="w-8 h-8 rounded-full bg-gold text-white grid place-items-center"><i class="ri-play-fill"></i></span> Tour Campus
                         </a>
                     </div>
 
-                    <!-- Stats -->
-                    <div class="mt-8 flex gap-8">
-                        <div><div class="text-[22px] font-extrabold text-navy">12K+</div><div class="text-xs text-slate-500 font-semibold">Success Stories</div></div>
-                        <div><div class="text-[22px] font-extrabold text-navy">150+</div><div class="text-xs text-slate-500 font-semibold">Trendy Subjects</div></div>
-                        <div><div class="text-[22px] font-extrabold text-navy">98%</div><div class="text-xs text-slate-500 font-semibold">Employability</div></div>
-                    </div>
-
-                    <div class="mt-6 inline-flex items-center gap-3 bg-white rounded-full px-3 py-2.5 shadow-sm border border-slate-100">
-                        <span class="w-8 h-8 rounded-full bg-navy text-white grid place-items-center shrink-0"><i class="ri-star-fill text-gold text-sm"></i></span>
-                        <span class="text-xs leading-tight"><b>One million students</b> have given a 5 star review to SIITE</span>
+                    <div class="mt-7 flex items-center gap-4">
+                        <div class="flex -space-x-2">
+                            <img src="https://i.pravatar.cc/100?img=32" class="w-9 h-9 rounded-full border-2 border-white">
+                            <img src="https://i.pravatar.cc/100?img=14" class="w-9 h-9 rounded-full border-2 border-white">
+                            <img src="https://i.pravatar.cc/100?img=33" class="w-9 h-9 rounded-full border-2 border-white">
+                        </div>
+                        <div class="text-xs leading-tight">
+                            <div class="font-extrabold text-navy flex items-center gap-1"><i class="ri-star-fill text-gold"></i> 4.9/5 <span class="font-semibold text-slate-500">• 12K+ Students</span></div>
+                            <div class="text-slate-500">Trusted by parents island-wide</div>
+                        </div>
+                        <span class="hidden sm:inline-flex ml-2 bg-gold/15 text-gold border border-gold/20 px-3 py-1 rounded-full text-xs font-extrabold">UGC Approved</span>
                     </div>
                 </div>
 
-                <!-- Right — Person POLISHED: not clipped, bigger icons, confetti off hair -->
-                <div class="relative flex justify-center lg:justify-end items-end overflow-visible lg:h-[620px] h-[540px]">
-                    <!-- subtle glow behind person -->
-                    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-[560px] h-[420px] bg-gradient-to-t from-teal/12 via-gold/6 to-transparent rounded-full blur-2xl"></div>
+                <!-- Right — New person placement: centered in soft frame, not floating randomly -->
+                <div class="relative flex justify-center lg:justify-end items-end">
+                    <!-- soft card behind person -->
+                    <div class="relative w-[380px] lg:w-[480px] h-[520px] lg:h-[580px]">
+                        <!-- background shape -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-[#E6F5F5] to-[#FFF7E0] rounded-[36px] border border-white shadow-[0_24px_60px_rgba(15,45,77,0.12)] overflow-hidden"></div>
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-gold rounded-2xl rotate-12 opacity-90 hidden lg:block"></div>
+                        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-teal rounded-xl -rotate-12 opacity-90 hidden lg:block"></div>
+                        <!-- person -->
+                        <img src="/images/hero-image-remove-bg-io.png" alt="SIITE Student" class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[360px] lg:w-[420px] h-auto object-contain object-bottom">
 
-                    <!-- Floating icons — bigger (w-11) & tighter orbit -->
-                    <div class="absolute top-[10%] right-[14%] w-11 h-11 bg-white rounded-xl shadow-[0_12px_24px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><i class="ri-graduation-cap-fill text-teal text-lg"></i></div>
-                    <div class="absolute top-[20%] right-[4%] w-11 h-11 bg-white rounded-xl shadow-[0_12px_24px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><span class="text-xs font-extrabold text-blue-600">Ps</span></div>
-                    <div class="absolute top-[38%] right-[0%] w-11 h-11 bg-white rounded-xl shadow-[0_12px_24px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><i class="ri-book-open-line text-amber-600 text-lg"></i></div>
-                    <div class="absolute bottom-[22%] right-[7%] w-11 h-11 bg-white rounded-xl shadow-[0_12px_24px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><i class="ri-youtube-fill text-red-500 text-lg"></i></div>
-                    <div class="absolute bottom-[38%] left-[2%] w-11 h-11 bg-white rounded-xl shadow-[0_12px_24px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20 hidden lg:grid"><i class="ri-code-s-slash-line text-navy text-lg"></i></div>
-                    <div class="absolute top-[30%] left-[4%] w-11 h-11 bg-white rounded-xl shadow-[0_12px_24px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><i class="ri-quill-pen-line text-teal text-lg"></i></div>
-                    <!-- confetti — FIXED off hair, now above head -->
-                    <div class="absolute top-[6%] right-[20%] flex gap-1.5 z-20 rotate-12">
-                        <span class="w-1.5 h-6 bg-red-400 rounded-full"></span>
-                        <span class="w-1.5 h-6 bg-teal rounded-full"></span>
-                        <span class="w-1.5 h-4 bg-gold rounded-full"></span>
+                        <!-- Floating stats — FIXED positions, not random -->
+                        <div class="absolute -left-4 lg:-left-8 top-[18%] bg-white rounded-2xl shadow-[0_16px_36px_rgba(15,45,77,0.12)] px-4 py-3 flex items-center gap-3 border border-slate-100">
+                            <div class="w-10 h-10 rounded-xl bg-teal text-white grid place-items-center"><i class="ri-graduation-cap-fill text-lg"></i></div>
+                            <div><div class="text-xs text-slate-500 font-bold">Course</div><div class="text-sm font-extrabold text-navy">BSc Software Eng.</div></div>
+                        </div>
+                        <div class="absolute -right-4 lg:-right-6 bottom-[22%] bg-white rounded-2xl shadow-[0_16px_36px_rgba(15,45,77,0.12)] p-4 w-[260px] border border-slate-100">
+                            <div class="flex items-center justify-between"><span class="text-xs font-extrabold tracking-widest text-navy">PROGRESS</span><span class="text-xs font-bold text-teal bg-teal-50 px-2 py-0.5 rounded-full">LIVE</span></div>
+                            <div class="mt-3 space-y-2">
+                                <div class="flex justify-between text-xs font-bold"><span>Data Structures</span><span class="text-teal">85%</span></div>
+                                <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-teal" style="width:85%"></div></div>
+                                <div class="flex justify-between text-xs font-bold"><span>Web Dev</span><span class="text-gold">72%</span></div>
+                                <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-gold" style="width:72%"></div></div>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Person — FIXED not clipped, scaled 440px so belt visible, bottom padding -->
-                    <img src="/images/hero-image-remove-bg-io.png" alt="SIITE Campus Student" class="relative z-10 w-[360px] lg:w-[440px] h-auto object-contain object-bottom drop-shadow-[0_24px_48px_rgba(15,45,77,0.18)] translate-y-2">
                 </div>
+            </div>
+
+            <!-- Bottom stats bar — replaces overlapping dots, clean -->
+            <div class="mt-6 lg:mt-2 grid grid-cols-3 gap-4 max-w-[560px] lg:max-w-[520px]">
+                <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm text-center"><div class="text-xl font-extrabold text-navy">12K+</div><div class="text-xs font-semibold text-slate-500">Students</div></div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm text-center"><div class="text-xl font-extrabold text-navy">150+</div><div class="text-xs font-semibold text-slate-500">Lecturers</div></div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm text-center"><div class="text-xl font-extrabold text-teal">98%</div><div class="text-xs font-semibold text-slate-500">Placed</div></div>
             </div>
         </div>
     </section>
