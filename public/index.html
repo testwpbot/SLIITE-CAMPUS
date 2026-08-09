@@ -203,20 +203,20 @@
             </div>
         </div>
         <div id="galleryTrack" class="flex gap-5 overflow-x-auto scrollbar-none snap-x snap-mandatory px-6 lg:px-[calc((100%-1280px)/2+24px)] pb-4" style="scrollbar-width:none; -ms-overflow-style:none;">
-            <div class="snap-center h-[320px] lg:h-[380px] w-[340px] lg:w-[460px] bg-white rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition overflow-hidden p-1.5 shadow-lg"><img src="/images/gallery/university-graduation-ceremony-students--1.jpg" class="w-full h-full object-contain rounded-xl bg-slate-50"></div>
-            <div class="snap-center h-[320px] lg:h-[380px] w-[340px] lg:w-[460px] bg-white rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition overflow-hidden p-1.5 shadow-lg"><img src="/images/gallery/university-graduation-ceremony-students--2.jpg" class="w-full h-full object-contain rounded-xl bg-slate-50"></div>
-            <div class="snap-center h-[320px] lg:h-[380px] w-[340px] lg:w-[460px] bg-white rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition overflow-hidden p-1.5 shadow-lg"><img src="/images/gallery/university-graduation-ceremony-students--4.jpg" class="w-full h-full object-contain rounded-xl bg-slate-50"></div>
-            <div class="snap-center h-[320px] lg:h-[380px] w-[340px] lg:w-[460px] bg-white rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition overflow-hidden p-1.5 shadow-lg"><img src="/images/gallery/graduation-cap-book-university-campus-sr-2.jpg" class="w-full h-full object-contain rounded-xl bg-slate-50"></div>
-            <div class="snap-center h-[320px] lg:h-[380px] w-[340px] lg:w-[460px] bg-white rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition overflow-hidden p-1.5 shadow-lg"><img src="/images/gallery/graduation-cap-book-university-campus-sr-3.jpg" class="w-full h-full object-contain rounded-xl bg-slate-50"></div>
-            <div class="snap-center h-[320px] lg:h-[380px] w-[340px] lg:w-[460px] bg-white rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition overflow-hidden p-1.5 shadow-lg"><img src="/images/gallery/graduation-cap-book-university-campus-sr-1.jpg" class="w-full h-full object-contain rounded-xl bg-slate-50"></div>
-            <div class="snap-center h-[320px] lg:h-[380px] w-[340px] lg:w-[460px] bg-white rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition overflow-hidden p-1.5 shadow-lg"><img src="/images/gallery/university-graduation-ceremony-students--3.jpg" class="w-full h-full object-contain rounded-xl bg-slate-50"></div>
+            <div class="snap-center h-[360px] lg:h-[420px] w-[280px] lg:w-[320px] rounded-2xl shrink-0 overflow-hidden border-2 border-white/10 hover:border-gold/50 transition shadow-lg"><img src="/images/gallery/university-graduation-ceremony-students--1.jpg" class="w-full h-full object-cover object-center"></div>
+            <div class="snap-center h-[360px] lg:h-[420px] w-[280px] lg:w-[320px] rounded-2xl shrink-0 overflow-hidden border-2 border-white/10 hover:border-gold/50 transition shadow-lg"><img src="/images/gallery/university-graduation-ceremony-students--2.jpg" class="w-full h-full object-cover object-center"></div>
+            <div class="snap-center h-[360px] lg:h-[420px] w-[280px] lg:w-[320px] rounded-2xl shrink-0 overflow-hidden border-2 border-white/10 hover:border-gold/50 transition shadow-lg"><img src="/images/gallery/university-graduation-ceremony-students--4.jpg" class="w-full h-full object-cover object-center"></div>
+            <div class="snap-center h-[360px] lg:h-[420px] w-[280px] lg:w-[320px] rounded-2xl shrink-0 overflow-hidden border-2 border-white/10 hover:border-gold/50 transition shadow-lg"><img src="/images/gallery/graduation-cap-book-university-campus-sr-2.jpg" class="w-full h-full object-cover object-center"></div>
+            <div class="snap-center h-[360px] lg:h-[420px] w-[280px] lg:w-[320px] rounded-2xl shrink-0 overflow-hidden border-2 border-white/10 hover:border-gold/50 transition shadow-lg"><img src="/images/gallery/graduation-cap-book-university-campus-sr-3.jpg" class="w-full h-full object-cover object-center"></div>
+            <div class="snap-center h-[360px] lg:h-[420px] w-[280px] lg:w-[320px] rounded-2xl shrink-0 overflow-hidden border-2 border-white/10 hover:border-gold/50 transition shadow-lg"><img src="/images/gallery/graduation-cap-book-university-campus-sr-1.jpg" class="w-full h-full object-cover object-center"></div>
+            <div class="snap-center h-[360px] lg:h-[420px] w-[280px] lg:w-[320px] rounded-2xl shrink-0 overflow-hidden border-2 border-white/10 hover:border-gold/50 transition shadow-lg"><img src="/images/gallery/university-graduation-ceremony-students--3.jpg" class="w-full h-full object-cover object-center"></div>
         </div>
         <div class="max-w-[1280px] mx-auto px-6 mt-6 flex justify-center gap-2" id="galleryDots">
             <span class="h-1.5 w-8 bg-gold rounded-full transition-all"></span><span class="h-1.5 w-1.5 bg-white/30 rounded-full transition-all"></span><span class="h-1.5 w-1.5 bg-white/30 rounded-full transition-all"></span>
         </div>
     </section>
     <script>
-        // Gallery — pro: smooth, full-image, infinite loop feeling, pause on hover
+        // Gallery — fixed: horizontal scroll only (no page jump), full image cards
         (function(){
             const track = document.getElementById('galleryTrack');
             const dots = document.querySelectorAll('#galleryDots span');
@@ -224,7 +224,13 @@
             const cards = track.querySelectorAll('div');
             let idx=0, timer;
             function updateDots(){ dots.forEach((d,i)=> d.className = i===idx%3 ? 'h-1.5 w-8 bg-gold rounded-full transition-all' : 'h-1.5 w-1.5 bg-white/30 rounded-full transition-all'); }
-            function go(i){ idx=(i+cards.length)%cards.length; cards[idx].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'}); updateDots(); }
+            function go(i){
+                idx=(i+cards.length)%cards.length;
+                const card = cards[idx];
+                const left = card.offsetLeft - track.offsetLeft - (track.clientWidth - card.offsetWidth)/2;
+                track.scrollTo({left, behavior:'smooth'});
+                updateDots();
+            }
             function next(){ go(idx+1); }
             function prev(){ go(idx-1); }
             document.getElementById('galleryNext')?.addEventListener('click', ()=>{ next(); reset(); });
@@ -233,11 +239,8 @@
             function reset(){ clearInterval(timer); start(); }
             track.addEventListener('mouseenter', ()=> clearInterval(timer));
             track.addEventListener('mouseleave', start);
-            // draggable
-            let sx=0, dx=0; track.addEventListener('touchstart', e=> sx=e.touches[0].clientX, {passive:true});
-            track.addEventListener('touchend', e=>{ dx=e.changedTouches[0].clientX - sx; if(dx < -40) next(); if(dx > 40) prev(); reset(); });
-            // auto update idx on manual scroll
-            track.addEventListener('scroll', ()=>{ const c=Math.round(track.scrollLeft / 360); if(c!==idx){ idx=c; updateDots(); } }, {passive:true});
+            let sx=0; track.addEventListener('touchstart', e=> sx=e.touches[0].clientX, {passive:true});
+            track.addEventListener('touchend', e=>{ const dx=e.changedTouches[0].clientX - sx; if(dx < -40) next(); if(dx > 40) prev(); reset(); });
             start();
         })();
     </script>
