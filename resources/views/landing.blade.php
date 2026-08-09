@@ -73,155 +73,70 @@
         </div>
     </header>
 
-    <!-- HERO — educational art background (light, premium) -->
-    <section class="relative overflow-hidden bg-[#F8FBFD]">
-        <!-- Educational art background -->
-        <div class="absolute inset-0 z-0 overflow-hidden">
-            <!-- soft gradient base -->
-            <div class="absolute inset-0 bg-gradient-to-br from-white via-[#F3F8FA] to-[#EEF4F7]"></div>
-            <!-- subtle dot grid -->
-            <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(#0F2D4D 1.2px, transparent 1.2px); background-size: 22px 22px;"></div>
-            <!-- floating educational icons — very faint, palette matched -->
-            <i class="ri-graduation-cap-fill absolute top-[12%] left-[8%] text-[64px] text-navy/[0.06] rotate-12"></i>
-            <i class="ri-book-open-line absolute top-[18%] left-[28%] text-[36px] text-teal/[0.08] -rotate-12"></i>
-            <i class="ri-lightbulb-line absolute top-[8%] right-[22%] text-[48px] text-gold/[0.10] rotate-6"></i>
-            <i class="ri-quill-pen-line absolute top-[30%] right-[8%] text-[40px] text-navy/[0.06] -rotate-12"></i>
-            <i class="ri-calculator-line absolute bottom-[24%] left-[6%] text-[42px] text-navy/[0.05] rotate-12"></i>
-            <i class="ri-microscope-line absolute bottom-[18%] left-[32%] text-[38px] text-teal/[0.07] -rotate-6"></i>
-            <i class="ri-code-s-slash-line absolute bottom-[14%] right-[18%] text-[44px] text-gold/[0.09] rotate-12"></i>
-            <i class="ri-award-line absolute top-[42%] right-[30%] text-[30px] text-navy/[0.05]"></i>
-            <!-- soft blobs -->
-            <div class="absolute -top-20 -right-20 w-[520px] h-[520px] bg-teal/10 blur-[90px] rounded-full"></div>
-            <div class="absolute -bottom-32 -left-20 w-[560px] h-[560px] bg-gold/10 blur-[100px] rounded-full"></div>
-            <div class="absolute top-1/3 right-1/4 w-[360px] h-[360px] bg-navy/5 blur-[80px] rounded-full"></div>
-            <!-- curved underline art -->
-            <svg class="absolute bottom-0 left-0 w-full h-[120px] opacity-[0.04]" viewBox="0 0 1440 120" fill="none"><path d="M0 80 Q 360 10 720 60 T1440 40" stroke="#0F2D4D" stroke-width="2" fill="none"/><path d="M0 100 Q 400 30 800 80 T1440 60" stroke="#FFB703" stroke-width="1.5" fill="none"/></svg>
+    <!-- HERO — SkillCraft style: person floating, doodles, no dark card -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#F0FAF8] via-white to-[#FFF8F0]">
+        <!-- Line-art doodles (SkillCraft style) -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <i class="ri-ruler-line absolute top-[14%] left-[2%] text-[28px] text-slate-400/25 rotate-12"></i>
+            <i class="ri-global-line absolute bottom-[12%] left-[1%] text-[56px] text-slate-400/15"></i>
+            <i class="ri-compass-3-line absolute top-1/2 left-[42%] text-[28px] text-slate-400/10 rotate-12 hidden lg:block"></i>
+            <div class="absolute top-[10%] left-[48%] w-12 h-12 border border-slate-300/20 rounded-full hidden lg:block"></div>
         </div>
-        <div class="relative z-10 max-w-[1280px] mx-auto px-6 pt-8 lg:pt-4 pb-12 lg:pb-0">
-            <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center">
-                <!-- Left -->
-                <div class="pt-6 lg:pt-12 pb-6">
-                    <div class="inline-flex items-center gap-2 bg-white shadow-sm border border-slate-200 rounded-full px-3 py-1.5 text-xs font-bold">
-                        <span class="bg-teal text-white rounded-full px-2.5 py-1 text-[10px] tracking-widest">NEW</span>
-                        <span class="text-slate-700">Admissions Open for 2026 Intake</span>
-                        <span class="w-6 h-6 rounded-full bg-navy text-white grid place-items-center"><i class="ri-arrow-right-line"></i></span>
-                    </div>
 
-                    <h1 class="font-display font-extrabold text-[38px] sm:text-[48px] lg:text-[54px] leading-[0.92] tracking-[-0.03em] text-navy mt-6">
-                        Shape Your<br>
-                        <span class="relative inline-block">Future
-                            <span class="absolute left-0 -bottom-1.5 w-full h-[9px] bg-[#FDE68A] -rotate-1 opacity-80"></span>
-                        </span>
-                        <span class="text-slate-900"> with</span><br>
-                        <span class="bg-gradient-to-r from-[#0E9F9C] to-[#0A2342] bg-clip-text text-transparent">SIITE CAMPUS</span>
+        <div class="relative z-10 max-w-[1280px] mx-auto px-6 pt-8 lg:pt-6 pb-0">
+            <div class="grid lg:grid-cols-2 gap-6 items-center">
+                <!-- Left — SkillCraft style content -->
+                <div class="pb-8 lg:pb-12 pt-4">
+                    <h1 class="font-display font-extrabold text-[40px] sm:text-[48px] lg:text-[54px] leading-[0.98] tracking-[-0.03em] text-[#0F2D4D]">
+                        Shape Your <span class="text-gold">Future</span><br>
+                        with <span class="text-teal">SIITE CAMPUS</span>
                     </h1>
-                    <p class="text-slate-500 text-[15px] leading-7 mt-5 max-w-[520px]">
-                        Sri Lanka’s most trusted LMS — Synergy Institute of Information Technology & English. Industry-aligned degrees, global lecturers & 98% graduate employability.
+                    <p class="text-slate-500 text-[14.5px] leading-7 mt-5 max-w-[520px]">
+                        Join thousands of learners and unlock success with expert-led programs at SIITE Campus. Learn at your pace and gain valuable skills for career growth!
                     </p>
 
-                    <!-- Search / CTA — FIXED icon alignment -->
-                    <div class="mt-7 flex flex-col sm:flex-row gap-3 max-w-[560px]">
-                        <div class="flex-1 flex items-center bg-white rounded-full shadow-[0_8px_24px_rgba(15,45,77,0.07)] border border-slate-200 h-[52px] pl-4 pr-1.5">
-                            <i class="ri-search-line text-slate-400 text-[20px] shrink-0"></i>
-                            <input placeholder="Search course e.g. Software Engineering" class="flex-1 h-full outline-none text-[14px] placeholder:text-slate-400 bg-transparent px-3">
-                            <button class="hidden sm:inline-flex bg-navy hover:bg-navy-800 text-white rounded-full w-9 h-9 items-center justify-center shrink-0 transition"><i class="ri-search-line text-[18px]"></i></button>
-                        </div>
-                        <a href="#" class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-[#0A2342] text-white font-bold px-7 h-[52px] rounded-full text-sm shadow-[0_10px_22px_rgba(15,45,77,0.18)] transition shrink-0">
-                            Explore Programs
-                        </a>
+                    <div class="mt-7 flex flex-wrap items-center gap-3">
+                        <a href="#" class="inline-flex items-center justify-center bg-teal hover:bg-teal-700 text-white font-extrabold px-7 h-[46px] rounded-full text-sm shadow-[0_8px_20px_rgba(14,159,156,0.25)]">Get Started Now</a>
+                        <a href="#" class="inline-flex items-center justify-center gap-2 bg-gold text-white w-10 h-10 rounded-full shadow-md"><i class="ri-play-fill text-lg ml-0.5"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center bg-white border border-slate-200 text-navy font-bold px-6 h-[46px] rounded-full text-sm">How It Works</a>
                     </div>
 
-                    <!-- Social proof -->
-                    <div class="mt-7 flex flex-wrap items-center gap-6">
-                        <div class="flex items-center gap-3">
-                            <div class="flex -space-x-2">
-                                <img src="https://i.pravatar.cc/100?img=33" class="w-9 h-9 rounded-full border-2 border-white">
-                                <img src="https://i.pravatar.cc/100?img=14" class="w-9 h-9 rounded-full border-2 border-white">
-                                <img src="https://i.pravatar.cc/100?img=32" class="w-9 h-9 rounded-full border-2 border-white">
-                                <div class="w-9 h-9 rounded-full bg-gold border-2 border-white grid place-items-center text-xs font-extrabold text-navy">2K+</div>
-                            </div>
-                            <div class="text-sm leading-none">
-                                <div class="flex text-gold text-[14px]">★★★★★ <span class="text-navy font-extrabold ml-1">4.9/5</span></div>
-                                <div class="text-slate-500 text-xs">Trusted by 12,000+ students</div>
-                            </div>
-                        </div>
-                        <div class="hidden sm:flex items-center gap-2 text-slate-500 text-xs font-semibold">
-                            <span class="w-8 h-px bg-slate-300"></span> UGC Approved • Global Recognition
-                        </div>
+                    <!-- Stats like SkillCraft: 8K+ etc -->
+                    <div class="mt-8 flex gap-8">
+                        <div><div class="text-[22px] font-extrabold text-navy">12K+</div><div class="text-xs text-slate-500 font-semibold">Success Stories</div></div>
+                        <div><div class="text-[22px] font-extrabold text-navy">150+</div><div class="text-xs text-slate-500 font-semibold">Trendy Subjects</div></div>
+                        <div><div class="text-[22px] font-extrabold text-navy">98%</div><div class="text-xs text-slate-500 font-semibold">Employability</div></div>
                     </div>
 
-                    <!-- Stats mini -->
-                    <div class="mt-8 grid grid-cols-3 gap-4 max-w-[560px]">
-                        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm">
-                            <div class="text-2xl font-extrabold text-navy">12K+</div>
-                            <div class="text-xs text-slate-500 font-semibold">Students</div>
-                        </div>
-                        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm">
-                            <div class="text-2xl font-extrabold text-navy">150+</div>
-                            <div class="text-xs text-slate-500 font-semibold">Expert Lecturers</div>
-                        </div>
-                        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm">
-                            <div class="text-2xl font-extrabold text-teal">98%</div>
-                            <div class="text-xs text-slate-500 font-semibold">Employability</div>
-                        </div>
+                    <div class="mt-6 inline-flex items-center gap-3 bg-white rounded-full px-3 py-2 shadow-sm border border-slate-100">
+                        <span class="w-8 h-8 rounded-full bg-navy text-white grid place-items-center"><i class="ri-star-fill text-gold text-sm"></i></span>
+                        <span class="text-xs leading-tight"><b>One million students</b> have given a 5 star review to SIITE</span>
                     </div>
                 </div>
 
-                <!-- Right - Image Card -->
-                <div class="relative lg:h-[640px] flex items-end justify-center">
-                    <!-- Background shape -->
-                    <div class="absolute inset-0 lg:top-6 lg:bottom-0 bg-gradient-to-b from-teal/10 via-navy/[0.04] to-transparent rounded-[32px]"></div>
-                    <div class="absolute top-10 right-6 w-64 h-64 bg-gold/20 blur-[80px] rounded-full"></div>
-                    <div class="absolute bottom-20 left-10 w-72 h-72 bg-teal/15 blur-[90px] rounded-full"></div>
+                <!-- Right — Person like SkillCraft: big cutout, no card, floating icons -->
+                <div class="relative flex justify-center lg:justify-end items-end overflow-visible min-h-[520px] lg:min-h-[620px]">
+                    <!-- subtle backdrop glow -->
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[520px] h-[420px] bg-gradient-to-t from-teal/10 via-gold/5 to-transparent rounded-full blur-2xl"></div>
 
-                    <!-- Image container — POLISHED: soft gold top-border, refined shadow, image not harsh -->
-                    <div class="relative z-10 w-full max-w-[520px]">
-                        <div class="w-full h-[520px] lg:h-[620px] rounded-[28px] overflow-hidden hero-card relative gold-ring">
-                            <!-- subtle gold top accent -->
-                            <div class="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-70"></div>
-                            <!-- soft vignette so black doesn't feel flat -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
-                            <img src="/images/hero-image-remove-bg-io.png" alt="SIITE Campus Student" class="w-full h-full object-cover object-top object-center scale-[1.02]">
-                        </div>
-
-                        <!-- Floating Card 1 — glass polish -->
-                        <div class="absolute -left-2 sm:-left-6 top-20 bg-white/95 backdrop-blur rounded-2xl shadow-[0_16px_40px_rgba(15,45,77,0.14)] p-3 flex items-center gap-3 border border-white">
-                            <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal grid place-items-center text-xl"><i class="ri-graduation-cap-fill"></i></div>
-                            <div>
-                                <div class="text-xs text-slate-500 font-semibold">Enrolled Course</div>
-                                <div class="text-sm font-extrabold text-navy">BSc Software Eng.</div>
-                            </div>
-                            <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                        </div>
-
-                        <!-- Floating Card 2 - LMS — polished -->
-                        <div class="absolute -right-2 sm:-right-4 bottom-28 bg-white/95 backdrop-blur rounded-2xl shadow-[0_16px_40px_rgba(15,45,77,0.14)] p-4 border border-white w-[280px]">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="text-xs font-extrabold tracking-widest text-navy flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal"></span> MY LMS</div>
-                                <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2 py-1 rounded-full">Live</span>
-                            </div>
-                            <div class="space-y-3">
-                                <div>
-                                    <div class="flex justify-between text-xs font-bold mb-1"><span class="text-slate-600">Data Structures</span><span class="text-teal">85%</span></div>
-                                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-teal" style="width:85%"></div></div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-xs font-bold mb-1"><span class="text-slate-600">Web Development</span><span class="text-gold">72%</span></div>
-                                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-gold" style="width:72%"></div></div>
-                                </div>
-                            </div>
-                            <div class="mt-3 flex items-center gap-2 text-xs font-bold text-navy"><i class="ri-play-circle-fill text-teal text-lg"></i> Next: Live Lecture - Today 6 PM</div>
-                        </div>
-
-                        <!-- Floating badge — softer, not harsh navy pill -->
-                        <div class="absolute left-1/2 -translate-x-1/2 bottom-5 bg-navy/95 backdrop-blur text-white rounded-full px-5 py-2.5 flex items-center gap-3 shadow-[0_12px_30px_rgba(2,6,23,0.35)] border border-white/10">
-                            <span class="w-8 h-8 rounded-full bg-white/15 grid place-items-center"><i class="ri-award-fill text-gold"></i></span>
-                            <div class="text-sm leading-none">
-                                <div class="font-extrabold">#1 Ranked</div>
-                                <div class="text-white/70 text-xs">Private Campus in Sri Lanka</div>
-                            </div>
-                        </div>
+                    <!-- Floating icons around person (SkillCraft style) -->
+                    <div class="absolute top-[18%] right-[18%] w-9 h-9 bg-white rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><i class="ri-graduation-cap-fill text-teal"></i></div>
+                    <div class="absolute top-[28%] right-[6%] w-9 h-9 bg-white rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><span class="text-[10px] font-extrabold text-blue-600">Ps</span></div>
+                    <div class="absolute top-[42%] right-[2%] w-9 h-9 bg-white rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><i class="ri-book-open-line text-amber-600"></i></div>
+                    <div class="absolute bottom-[28%] right-[10%] w-9 h-9 bg-white rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><i class="ri-youtube-fill text-red-500"></i></div>
+                    <div class="absolute bottom-[36%] left-[6%] w-9 h-9 bg-white rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20 hidden lg:grid"><i class="ri-code-s-slash-line text-navy"></i></div>
+                    <div class="absolute top-[36%] left-[8%] w-9 h-9 bg-white rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.08)] grid place-items-center border border-slate-100 z-20"><i class="ri-quill-pen-line text-teal"></i></div>
+                    <!-- confetti near head like SkillCraft -->
+                    <div class="absolute top-[10%] right-[28%] flex gap-1 z-20 rotate-12">
+                        <span class="w-1.5 h-5 bg-red-400 rounded-full"></span>
+                        <span class="w-1.5 h-5 bg-teal rounded-full"></span>
+                        <span class="w-1.5 h-3 bg-gold rounded-full"></span>
                     </div>
+                    <!-- faint book doodle -->
+                    <i class="ri-book-open-line absolute bottom-[42%] left-[36%] text-[42px] text-slate-300/30 rotate-12 hidden lg:block"></i>
+
+                    <!-- Person — NO dark card, just image cutout (like SkillCraft) -->
+                    <img src="/images/hero-image-remove-bg-io.png" alt="SIITE Campus Student" class="relative z-10 w-[380px] lg:w-[480px] h-auto object-contain object-bottom drop-shadow-[0_20px_40px_rgba(15,45,77,0.18)]">
                 </div>
             </div>
         </div>
