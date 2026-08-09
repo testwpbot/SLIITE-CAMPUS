@@ -313,25 +313,25 @@
                     <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-computer-line"></i></div>
                     <h3 class="font-extrabold text-navy mt-4 text-lg">Information Technology</h3>
                     <p class="text-slate-500 text-sm mt-2">Certificate & Diploma in IT — from basics to advanced networking & software.</p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy">Explore <i class="ri-arrow-right-line"></i></div>
+                    <a href="#apply" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy group-hover:gap-3 hover:text-gold transition-all">Explore <i class="ri-arrow-right-line bg-navy text-white w-6 h-6 rounded-full grid place-items-center group-hover:bg-gold group-hover:text-navy transition"></i></a>
                 </div>
                 <div class="group bg-white rounded-3xl p-7 border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition">
                     <div class="w-12 h-12 rounded-2xl bg-gold text-navy grid place-items-center text-xl"><i class="ri-english-input"></i></div>
                     <h3 class="font-extrabold text-navy mt-4 text-lg">English</h3>
                     <p class="text-slate-500 text-sm mt-2">Certificate & Diploma in English — grammar, business & academic English.</p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy">Explore <i class="ri-arrow-right-line"></i></div>
+                    <a href="#apply" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy group-hover:gap-3 hover:text-gold transition-all">Explore <i class="ri-arrow-right-line bg-navy text-white w-6 h-6 rounded-full grid place-items-center group-hover:bg-gold group-hover:text-navy transition"></i></a>
                 </div>
                 <div class="group bg-white rounded-3xl p-7 border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition">
                     <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-book-2-line"></i></div>
                     <h3 class="font-extrabold text-navy mt-4 text-lg">Arabic</h3>
                     <p class="text-slate-500 text-sm mt-2">Certificate & Diploma in Arabic — reading, writing & conversational.</p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy">Explore <i class="ri-arrow-right-line"></i></div>
+                    <a href="#apply" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy group-hover:gap-3 hover:text-gold transition-all">Explore <i class="ri-arrow-right-line bg-navy text-white w-6 h-6 rounded-full grid place-items-center group-hover:bg-gold group-hover:text-navy transition"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Success Stories — Student Testimonials -->
+    <!-- Success Stories — Student Testimonials — AUTO SLIDER -->
     <section class="bg-[#F8FBFD] py-16">
         <div class="max-w-[1280px] mx-auto px-6">
             <div class="flex flex-wrap items-end justify-between gap-4">
@@ -340,8 +340,8 @@
                     <h2 class="font-display font-extrabold text-[32px] leading-tight text-navy mt-3">What our <span class="text-gold">students</span> say</h2>
                 </div>
                 <div class="flex gap-2">
-                    <button onclick="document.getElementById('testTrack').scrollBy({left:-360, behavior:'smooth'})" class="w-10 h-10 rounded-full bg-white border border-slate-200 grid place-items-center hover:bg-slate-50"><i class="ri-arrow-left-line"></i></button>
-                    <button onclick="document.getElementById('testTrack').scrollBy({left:360, behavior:'smooth'})" class="w-10 h-10 rounded-full bg-navy text-white grid place-items-center shadow"><i class="ri-arrow-right-line"></i></button>
+                    <button id="testPrev" class="w-10 h-10 rounded-full bg-white border border-slate-200 grid place-items-center hover:bg-slate-50 transition"><i class="ri-arrow-left-line"></i></button>
+                    <button id="testNext" class="w-10 h-10 rounded-full bg-navy text-white grid place-items-center shadow hover:bg-navy-800 transition"><i class="ri-arrow-right-line"></i></button>
                 </div>
             </div>
             <div id="testTrack" class="mt-8 flex gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory pb-4" style="scrollbar-width:none;">
@@ -380,6 +380,26 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Success Stories auto slider
+        (function(){
+            const track=document.getElementById('testTrack');
+            if(!track) return;
+            let idx=0, timer;
+            const cards=track.children;
+            function go(i){ idx=(i+cards.length)%cards.length; const c=cards[idx]; const left=c.offsetLeft - track.offsetLeft - (track.clientWidth - c.offsetWidth)/2; track.scrollTo({left, behavior:'smooth'}); }
+            function next(){ go(idx+1); }
+            function prev(){ go(idx-1); }
+            document.getElementById('testNext')?.addEventListener('click', ()=>{ next(); reset(); });
+            document.getElementById('testPrev')?.addEventListener('click', ()=>{ prev(); reset(); });
+            function start(){ timer=setInterval(next, 3200); }
+            function reset(){ clearInterval(timer); start(); }
+            track.addEventListener('mouseenter', ()=>clearInterval(timer));
+            track.addEventListener('mouseleave', start);
+            start();
+        })();
+    </script>
 
     <!-- Logos / Trust -->
     <section class="border-y border-slate-100 bg-white">
