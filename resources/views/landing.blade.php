@@ -59,8 +59,8 @@
         </div>
     </div>
 
-    <!-- Navbar — scroll transition: transparent (hero bg) → white -->
-    <header id="mainHeader" class="fixed top-0 w-full z-50 bg-transparent border-b border-transparent transition-all duration-300">
+    <!-- Navbar — scroll: transparent on hero → white on scroll (sticky, not fixed) -->
+    <header id="mainHeader" class="sticky top-0 z-50 bg-white/0 border-b border-transparent transition-all duration-300">
         <div class="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center">
             <a href="/" class="flex items-center shrink-0">
                 <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[62px] lg:h-[72px] w-auto object-contain">
@@ -83,7 +83,6 @@
         </div>
     </header>
 
-    <div class="h-[72px]"></div> <!-- spacer for fixed header -->
     <!-- HERO — COMPLETELY REDESIGNED (premium, clean, balanced) -->
     <section class="relative overflow-hidden bg-white">
         <!-- New background art — geometric, clean, SIITE palette -->
@@ -319,16 +318,16 @@
     </footer>
 
     <script>
-        // Header scroll switch: transparent on hero → white on scroll
+        // Header scroll switch: transparent on hero → white + shadow on scroll (sticky)
         (function(){
             const h = document.getElementById('mainHeader');
             function onScroll(){
-                if(window.scrollY > 10){
+                if(window.scrollY > 6){
                     h.classList.add('bg-white/95','backdrop-blur','glass','shadow-[0_8px_30px_rgba(15,45,77,0.08)]','border-slate-200/60');
-                    h.classList.remove('bg-transparent','border-transparent');
+                    h.classList.remove('bg-white/0','border-transparent');
                 } else {
                     h.classList.remove('bg-white/95','backdrop-blur','glass','shadow-[0_8px_30px_rgba(15,45,77,0.08)]','border-slate-200/60');
-                    h.classList.add('bg-transparent','border-transparent');
+                    h.classList.add('bg-white/0','border-transparent');
                 }
             }
             window.addEventListener('scroll', onScroll, {passive:true});
