@@ -352,24 +352,22 @@
         const lenis = new Lenis();
         function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
-        // Typewriter for SIITE CAMPUS — loops with pause
+        // Typewriter — proper title: types once and holds (no loop)
         (function(){
             const el = document.getElementById('typewriter');
             const text = 'SIITE CAMPUS';
-            let i = 0, deleting = false, delay = 120;
-            function tick(){
-                if(!deleting){
-                    el.textContent = text.slice(0, i+1);
+            let i = 0;
+            function type(){
+                if(i <= text.length){
+                    el.textContent = text.slice(0, i);
                     i++;
-                    if(i === text.length){ deleting = false; setTimeout(()=>{ deleting = true; tick(); }, 1800); return; }
+                    setTimeout(type, 110);
                 } else {
-                    el.textContent = text.slice(0, i-1);
-                    i--;
-                    if(i === 0){ deleting = false; }
+                    // keep cursor blinking, no erase
+                    el.style.borderRightColor = '#FFB703';
                 }
-                setTimeout(tick, deleting ? 70 : 120);
             }
-            tick();
+            type();
         })();
     </script>
 </body>
