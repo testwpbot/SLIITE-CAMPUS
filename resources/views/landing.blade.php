@@ -49,23 +49,23 @@
         </div>
     </div>
 
-    <!-- Navbar — polished: tighter, premium shadow, logo breathing room -->
-    <header class="sticky top-0 z-50 bg-white/85 glass border-b border-slate-200/60 shadow-[0_1px_20px_rgba(15,45,77,0.06)]">
-        <div class="max-w-[1280px] mx-auto px-6 py-2.5 flex items-center justify-between gap-8">
-            <a href="/" class="flex items-center gap-3 shrink-0">
-                <img src="/images/logo-removebg-preview.png" alt="SIITE Campus - Synergy Institute of Information Technology" class="h-[52px] lg:h-[58px] w-auto object-contain">
+    <!-- Navbar — FIXED alignment: logo | centered nav | actions -->
+    <header class="sticky top-0 z-50 bg-white/90 glass border-b border-slate-200/60 shadow-[0_2px_24px_rgba(15,45,77,0.06)]">
+        <div class="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center">
+            <a href="/" class="flex items-center shrink-0">
+                <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[50px] w-auto object-contain">
             </a>
-            <nav class="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-slate-700">
-                <a href="#" class="text-navy border-b-2 border-gold pb-1">Home</a>
-                <a href="#" class="hover:text-navy flex items-center gap-1">Programs <i class="ri-arrow-down-s-line text-slate-400"></i></a>
-                <a href="#" class="hover:text-navy">About</a>
-                <a href="#" class="hover:text-navy">LMS</a>
-                <a href="#" class="hover:text-navy">Admissions</a>
-                <a href="#" class="hover:text-navy">Contact</a>
+            <nav class="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-slate-700 mx-auto">
+                <a href="#" class="text-navy border-b-2 border-gold pb-1 leading-none">Home</a>
+                <a href="#" class="hover:text-navy flex items-center gap-1 leading-none">Programs <i class="ri-arrow-down-s-line text-slate-400 text-[16px]"></i></a>
+                <a href="#" class="hover:text-navy leading-none">About</a>
+                <a href="#" class="hover:text-navy leading-none">LMS</a>
+                <a href="#" class="hover:text-navy leading-none">Admissions</a>
+                <a href="#" class="hover:text-navy leading-none">Contact</a>
             </nav>
-            <div class="flex items-center gap-3">
-                <a href="/login" class="hidden sm:inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-navy-600"><i class="ri-user-3-line"></i> Student Login</a>
-                <a href="/register" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-navy font-extrabold text-sm px-6 py-3 rounded-full shadow-[0_8px_20px_rgba(255,183,3,0.35)] transition">
+            <div class="flex items-center gap-3 shrink-0">
+                <a href="/login" class="hidden md:inline-flex items-center gap-1.5 text-sm font-bold text-navy hover:text-navy-600 leading-none"><i class="ri-user-3-line text-[16px]"></i> Student Login</a>
+                <a href="/register" class="inline-flex items-center gap-1.5 bg-gold hover:bg-gold-dark text-navy font-extrabold text-sm px-6 h-10 rounded-full shadow-[0_8px_20px_rgba(255,183,3,0.35)] transition leading-none">
                     Apply Now <i class="ri-arrow-right-line"></i>
                 </a>
                 <button class="lg:hidden w-9 h-9 rounded-xl bg-slate-100 grid place-items-center"><i class="ri-menu-line text-xl"></i></button>
@@ -75,22 +75,19 @@
 
     <!-- HERO — with autoplay graduation background slider (white theme) -->
     <section class="relative overflow-hidden bg-white">
-        <!-- Background Slider (autoplay, white overlay so text stays readable) -->
+        <!-- Background Slider — FIXED visibility: less washed out, graduation clearly visible but still white theme -->
         <div id="heroSlider" class="absolute inset-0 z-0">
-            <div class="slide absolute inset-0 opacity-100 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide1.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/84 backdrop-blur-[1px]"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60"></div><div class="absolute inset-0 bg-gradient-to-t from-teal/5 to-transparent"></div></div>
-            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide2.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/86"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60"></div></div>
-            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide3.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/86"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60"></div></div>
-            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide4.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/86"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60"></div></div>
-            <!-- subtle palette blobs -->
-            <div class="absolute top-20 right-20 w-72 h-72 bg-gold/10 blur-[80px] rounded-full"></div>
-            <div class="absolute bottom-10 left-1/4 w-80 h-80 bg-teal/10 blur-[80px] rounded-full"></div>
+            <div class="slide absolute inset-0 opacity-100 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide1.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/72"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/82 to-white/45"></div></div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide2.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/72"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/82 to-white/45"></div></div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide3.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/72"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/82 to-white/45"></div></div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide4.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/72"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/82 to-white/45"></div></div>
         </div>
-        <!-- Slider dots -->
-        <div class="absolute bottom-5 left-1/2 -translate-x-1/2 lg:left-[35%] z-20 flex gap-2">
-            <button class="dot h-2 w-8 rounded-full bg-navy transition-all" data-i="0"></button>
-            <button class="dot h-2 w-2 rounded-full bg-navy/20 transition-all" data-i="1"></button>
-            <button class="dot h-2 w-2 rounded-full bg-navy/20 transition-all" data-i="2"></button>
-            <button class="dot h-2 w-2 rounded-full bg-navy/20 transition-all" data-i="3"></button>
+        <!-- Slider dots — FIXED position: centered above bottom border, not overlapping stats -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-white/80 backdrop-blur px-3 py-2 rounded-full shadow-sm border border-slate-200">
+            <button class="dot h-2.5 w-8 rounded-full bg-navy transition-all" data-i="0" aria-label="slide 1"></button>
+            <button class="dot h-2.5 w-2.5 rounded-full bg-navy/20 transition-all" data-i="1" aria-label="slide 2"></button>
+            <button class="dot h-2.5 w-2.5 rounded-full bg-navy/20 transition-all" data-i="2" aria-label="slide 3"></button>
+            <button class="dot h-2.5 w-2.5 rounded-full bg-navy/20 transition-all" data-i="3" aria-label="slide 4"></button>
         </div>
         <div class="relative z-10 max-w-[1280px] mx-auto px-6 pt-8 lg:pt-4 pb-12 lg:pb-0">
             <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center">
@@ -114,14 +111,14 @@
                         Sri Lanka’s most trusted LMS — Synergy Institute of Information Technology & English. Industry-aligned degrees, global lecturers & 98% graduate employability.
                     </p>
 
-                    <!-- Search / CTA — polished pill -->
+                    <!-- Search / CTA — FIXED icon alignment -->
                     <div class="mt-7 flex flex-col sm:flex-row gap-3 max-w-[560px]">
-                        <div class="flex-1 flex items-center gap-3 bg-white rounded-full shadow-[0_8px_24px_rgba(15,45,77,0.07)] border border-slate-200/80 px-2 py-1.5 pl-4">
-                            <i class="ri-search-line text-slate-400 text-[18px]"></i>
-                            <input placeholder="Search course e.g. Software Engineering" class="flex-1 outline-none text-[14px] placeholder:text-slate-400 bg-transparent">
-                            <button class="hidden sm:inline-flex bg-navy hover:bg-navy-800 text-white rounded-full w-9 h-9 grid place-items-center shrink-0 transition"><i class="ri-search-line"></i></button>
+                        <div class="flex-1 flex items-center bg-white rounded-full shadow-[0_8px_24px_rgba(15,45,77,0.07)] border border-slate-200 h-[52px] pl-4 pr-1.5">
+                            <i class="ri-search-line text-slate-400 text-[20px] shrink-0"></i>
+                            <input placeholder="Search course e.g. Software Engineering" class="flex-1 h-full outline-none text-[14px] placeholder:text-slate-400 bg-transparent px-3">
+                            <button class="hidden sm:inline-flex bg-navy hover:bg-navy-800 text-white rounded-full w-9 h-9 items-center justify-center shrink-0 transition"><i class="ri-search-line text-[18px]"></i></button>
                         </div>
-                        <a href="#" class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-[#0A2342] text-white font-bold px-7 py-3.5 rounded-full text-sm shadow-[0_10px_22px_rgba(15,45,77,0.18)] transition">
+                        <a href="#" class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-[#0A2342] text-white font-bold px-7 h-[52px] rounded-full text-sm shadow-[0_10px_22px_rgba(15,45,77,0.18)] transition shrink-0">
                             Explore Programs
                         </a>
                     </div>
@@ -230,7 +227,7 @@
             let cur = 0, timer;
             function show(i){
                 slides.forEach((s,idx)=> s.style.opacity = idx===i ? '1' : '0');
-                dots.forEach((d,idx)=>{ d.className = idx===i ? 'dot h-2 w-8 rounded-full bg-navy transition-all' : 'dot h-2 w-2 rounded-full bg-navy/20 transition-all'; });
+                dots.forEach((d,idx)=>{ d.className = idx===i ? 'dot h-2.5 w-8 rounded-full bg-navy transition-all' : 'dot h-2.5 w-2.5 rounded-full bg-navy/20 transition-all'; });
                 cur = i;
             }
             function next(){ show((cur+1)%slides.length); }
