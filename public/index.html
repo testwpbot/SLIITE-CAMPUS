@@ -82,25 +82,35 @@
                 <a href="#" class="nav-link">Home</a>
                 <div class="relative group">
                     <a href="#" class="nav-link flex items-center gap-1">Programs <i class="ri-arrow-down-s-line text-slate-400 text-[16px] group-hover:rotate-180 transition"></i></a>
-                    <!-- Mega menu — desktop -->
-                    <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div class="bg-white rounded-2xl shadow-[0_20px_60px_rgba(15,45,77,0.18)] border border-slate-100 p-5 w-[680px] grid grid-cols-4 gap-4">
-                            <a href="#" class="group/item rounded-xl overflow-hidden border border-slate-100 hover:border-gold/50 hover:shadow-md transition">
-                                <div class="h-28 bg-gradient-to-br from-navy to-[#1a3a5f] grid place-items-center text-white text-3xl"><i class="ri-computer-line"></i></div>
-                                <div class="p-3"><div class="font-extrabold text-navy text-sm">Information Technology</div><div class="text-xs text-slate-500">Cert & Diploma</div></div>
-                            </a>
-                            <a href="#" class="group/item rounded-xl overflow-hidden border border-slate-100 hover:border-gold/50 hover:shadow-md transition">
-                                <div class="h-28 bg-gradient-to-br from-gold to-[#FFC933] grid place-items-center text-navy text-3xl"><i class="ri-english-input"></i></div>
-                                <div class="p-3"><div class="font-extrabold text-navy text-sm">English</div><div class="text-xs text-slate-500">Cert & Diploma</div></div>
-                            </a>
-                            <a href="#" class="group/item rounded-xl overflow-hidden border border-slate-100 hover:border-gold/50 hover:shadow-md transition">
-                                <div class="h-28 bg-gradient-to-br from-navy to-[#1a3a5f] grid place-items-center text-white text-3xl"><i class="ri-book-2-line"></i></div>
-                                <div class="p-3"><div class="font-extrabold text-navy text-sm">Arabic</div><div class="text-xs text-slate-500">Cert & Diploma</div></div>
-                            </a>
-                            <a href="#" class="group/item rounded-xl overflow-hidden border border-slate-100 hover:border-gold/50 hover:shadow-md transition">
-                                <div class="h-28 bg-gradient-to-br from-emerald-600 to-teal-600 grid place-items-center text-white text-3xl"><i class="ri-capsule-line"></i></div>
-                                <div class="p-3"><div class="font-extrabold text-navy text-sm">Pharmacy</div><div class="text-xs text-slate-500">Cert & Diploma</div></div>
-                            </a>
+                    <!-- Mega menu — modern, spacious -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="bg-white rounded-3xl shadow-[0_24px_64px_rgba(15,45,77,0.18)] border border-slate-100 overflow-hidden w-[860px]">
+                            <div class="bg-gradient-to-r from-navy to-[#1a3a5f] px-6 py-4 flex items-center justify-between">
+                                <div><div class="text-white font-extrabold">Explore Programs</div><div class="text-white/60 text-xs">Certificate & Diploma — SIITE Campus</div></div>
+                                <a href="#" class="bg-gold text-navy font-bold px-4 py-1.5 rounded-full text-xs">View All <i class="ri-arrow-right-line"></i></a>
+                            </div>
+                            <div class="p-6 grid grid-cols-4 gap-4">
+                                <a href="#" class="group/item rounded-2xl overflow-hidden border border-slate-100 hover:border-gold/40 hover:shadow-lg transition bg-white">
+                                    <div class="h-32 bg-gradient-to-br from-navy to-[#1a3a5f] grid place-items-center text-white text-4xl relative overflow-hidden"><i class="ri-computer-line"></i><div class="absolute -bottom-6 -right-6 w-20 h-20 bg-white/10 rounded-full blur-xl"></div></div>
+                                    <div class="p-4"><div class="font-extrabold text-navy text-sm">Information Technology</div><div class="text-xs text-slate-500 mt-1">Networking, Software, Cyber</div><span class="mt-3 inline-flex items-center gap-1 text-xs font-bold text-gold">Explore <i class="ri-arrow-right-line"></i></span></div>
+                                </a>
+                                <a href="#" class="group/item rounded-2xl overflow-hidden border border-slate-100 hover:border-gold/40 hover:shadow-lg transition bg-white">
+                                    <div class="h-32 bg-gradient-to-br from-gold to-[#FFC933] grid place-items-center text-navy text-4xl"><i class="ri-english-input"></i></div>
+                                    <div class="p-4"><div class="font-extrabold text-navy text-sm">English</div><div class="text-xs text-slate-500 mt-1">Business & Academic</div><span class="mt-3 inline-flex items-center gap-1 text-xs font-bold text-gold">Explore <i class="ri-arrow-right-line"></i></span></div>
+                                </a>
+                                <a href="#" class="group/item rounded-2xl overflow-hidden border border-slate-100 hover:border-gold/40 hover:shadow-lg transition bg-white">
+                                    <div class="h-32 bg-gradient-to-br from-navy to-[#1a3a5f] grid place-items-center text-white text-4xl"><i class="ri-book-2-line"></i></div>
+                                    <div class="p-4"><div class="font-extrabold text-navy text-sm">Arabic</div><div class="text-xs text-slate-500 mt-1">Reading & Conversation</div><span class="mt-3 inline-flex items-center gap-1 text-xs font-bold text-gold">Explore <i class="ri-arrow-right-line"></i></span></div>
+                                </a>
+                                <a href="#" class="group/item rounded-2xl overflow-hidden border border-slate-100 hover:border-gold/40 hover:shadow-lg transition bg-white">
+                                    <div class="h-32 bg-gradient-to-br from-emerald-600 to-teal-600 grid place-items-center text-white text-4xl"><i class="ri-capsule-line"></i></div>
+                                    <div class="p-4"><div class="font-extrabold text-navy text-sm">Pharmacy</div><div class="text-xs text-slate-500 mt-1">Pharma Sciences</div><span class="mt-3 inline-flex items-center gap-1 text-xs font-bold text-gold">Explore <i class="ri-arrow-right-line"></i></span></div>
+                                </a>
+                            </div>
+                            <div class="bg-slate-50 px-6 py-3 flex items-center justify-between border-t border-slate-100">
+                                <span class="text-xs text-slate-500"><i class="ri-customer-service-line"></i> Need help choosing? Talk to counselor</span>
+                                <a href="#" class="text-xs font-bold text-navy hover:text-gold">Contact →</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -114,7 +124,7 @@
                 <a href="/register" class="hidden sm:inline-flex items-center gap-1.5 bg-gold hover:bg-gold-dark text-navy font-extrabold text-sm px-4 sm:px-6 h-9 sm:h-10 rounded-full shadow-[0_8px_20px_rgba(255,183,3,0.35)] transition leading-none whitespace-nowrap">
                     Apply Now <i class="ri-arrow-right-line"></i>
                 </a>
-                <button id="mobileMenuBtn" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 grid place-items-center hover:bg-slate-200 transition shrink-0"><i class="ri-menu-line text-xl text-navy"></i></button>
+                <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 grid place-items-center hover:bg-slate-200 transition shrink-0"><i class="ri-menu-line text-xl text-navy"></i></button>
             </div>
         </div>
     </header>
