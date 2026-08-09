@@ -41,11 +41,14 @@
         .nav-link::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: #FFB703; transition: width 0.28s ease; }
         .nav-link:hover::after { width: 100%; }
         /* Lenis smooth scroll — exact from Parametric Surface CodePen */
-        html.lenis, html.lenis body { height: auto; }
+        html.lenis, html.lenis body { height: auto; overscroll-behavior: none; }
         .lenis.lenis-smooth { scroll-behavior: auto !important; }
         .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
         .lenis.lenis-stopped { overflow: hidden; }
         .lenis.lenis-scrolling iframe { pointer-events: none; }
+        /* Anti-glitch: promote sticky header + reduce repaint */
+        #mainHeader { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
+        .no-glitch { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
@@ -67,7 +70,7 @@
     </div>
 
     <!-- Navbar — seamless with hero: solid #F7FBFC at top, no shadow -->
-    <header id="mainHeader" class="sticky top-0 z-50 bg-[#F7FBFC] border-b border-transparent shadow-none transition-all duration-300">
+    <header id="mainHeader" class="sticky top-0 z-50 bg-[#F7FBFC] border-b border-transparent shadow-none transition-all duration-300 will-change-transform">
         <div class="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center">
             <a href="/" class="flex items-center shrink-0">
                 <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[62px] lg:h-[72px] w-auto object-contain">
@@ -92,10 +95,10 @@
 
     <!-- HERO — COMPLETELY REDESIGNED (premium, clean, balanced) -->
     <section class="relative overflow-hidden bg-[#F7FBFC]">
-        <!-- Soft background — same as header, no grid seam -->
+        <!-- Soft background — same as header, reduced blur for GPU -->
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute inset-0 bg-gradient-to-b from-[#F7FBFC] to-white"></div>
-            <div class="absolute -right-32 top-1/2 -translate-y-1/2 w-[720px] h-[720px] bg-gradient-to-br from-teal/[0.07] to-gold/[0.06] rounded-full blur-3xl"></div>
+            <div class="absolute -right-32 top-1/2 -translate-y-1/2 w-[640px] h-[640px] bg-gradient-to-br from-teal/[0.05] to-gold/[0.04] rounded-full blur-[60px]"></div>
         </div>
 
         <div class="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8">
