@@ -91,10 +91,32 @@
                 <a href="/register" class="inline-flex items-center gap-1.5 bg-gold hover:bg-gold-dark text-navy font-extrabold text-sm px-6 h-10 rounded-full shadow-[0_8px_20px_rgba(255,183,3,0.35)] transition leading-none">
                     Apply Now <i class="ri-arrow-right-line"></i>
                 </a>
-                <button class="lg:hidden w-9 h-9 rounded-xl bg-slate-100 grid place-items-center"><i class="ri-menu-line text-xl"></i></button>
+                <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 grid place-items-center hover:bg-slate-200 transition"><i class="ri-menu-line text-xl text-navy"></i></button>
             </div>
         </div>
     </header>
+    <!-- Mobile Sidebar — right drawer -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-navy/50 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="mobileDrawer" class="fixed top-0 right-0 h-full w-[320px] max-w-[85vw] bg-white z-[61] translate-x-full transition-transform duration-300 ease-out shadow-2xl flex flex-col">
+        <div class="flex items-center justify-between p-6 border-b border-slate-100">
+            <img src="/images/logo-removebg-preview.png" alt="SIITE" class="h-10 w-auto object-contain">
+            <button id="mobileCloseBtn" class="w-9 h-9 rounded-full bg-slate-100 grid place-items-center hover:bg-slate-200"><i class="ri-close-line text-xl"></i></button>
+        </div>
+        <nav class="flex-1 p-6 space-y-1 overflow-y-auto">
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-navy text-white font-bold"><i class="ri-home-5-line text-lg"></i> Home</a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-book-open-line text-lg text-navy"></i> Programs <i class="ri-arrow-down-s-line ml-auto text-slate-400"></i></a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-information-line text-lg text-navy"></i> About</a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-dashboard-line text-lg text-navy"></i> LMS</a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-graduation-cap-line text-lg text-navy"></i> Admissions</a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-customer-service-2-line text-lg text-navy"></i> Contact</a>
+        </nav>
+        <div class="p-6 border-t border-slate-100 bg-slate-50/50">
+            <div class="text-xs font-extrabold tracking-widest text-slate-500 mb-3">ACCOUNT</div>
+            <a href="/login" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200 font-bold text-navy hover:bg-slate-50"><i class="ri-user-3-line text-lg"></i> Student Login</a>
+            <a href="/register" class="flex items-center justify-center gap-2 mt-3 bg-gold hover:bg-gold-dark text-navy font-extrabold h-11 rounded-full"><i class="ri-user-add-line"></i> Create Account</a>
+            <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 justify-center"><i class="ri-phone-line"></i> +94 11 754 4801</div>
+        </div>
+    </div>
 
     <!-- HERO — with wave background art like reference -->
     <section class="relative overflow-hidden bg-white">
@@ -475,6 +497,15 @@
             }
             window.addEventListener('scroll', onScroll, {passive:true});
             onScroll();
+        })();
+        // Mobile drawer — right sidebar
+        (function(){
+            const btn=document.getElementById('mobileMenuBtn'), close=document.getElementById('mobileCloseBtn'), drawer=document.getElementById('mobileDrawer'), overlay=document.getElementById('mobileOverlay');
+            function open(){ drawer.classList.remove('translate-x-full'); overlay.classList.remove('hidden'); requestAnimationFrame(()=> overlay.classList.remove('opacity-0')); document.body.style.overflow='hidden'; }
+            function closeD(){ drawer.classList.add('translate-x-full'); overlay.classList.add('opacity-0'); setTimeout(()=> overlay.classList.add('hidden'),300); document.body.style.overflow=''; }
+            btn?.addEventListener('click', open);
+            close?.addEventListener('click', closeD);
+            overlay?.addEventListener('click', closeD);
         })();
     </script>
     <!-- Lenis — exact scroll animation from CodePen (only scroll, no 3D) -->
