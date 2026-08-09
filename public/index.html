@@ -49,6 +49,10 @@
         /* Anti-glitch: promote sticky header + reduce repaint */
         #mainHeader { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
         .no-glitch { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
+        /* Typewriter */
+        .typewriter-wrap { display: inline; }
+        #typewriter { border-right: 3px solid #FFB703; padding-right: 3px; animation: blink 0.75s step-end infinite; }
+        @keyframes blink { 0%,50% { border-color: #FFB703; } 51%,100% { border-color: transparent; } }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
@@ -113,7 +117,7 @@
                     </div>
                     <h1 class="font-display font-extrabold text-[42px] sm:text-[50px] lg:text-[56px] leading-[0.95] tracking-[-0.03em] text-navy mt-5">
                         Your Future<br>
-                        Starts at <span class="text-gold">SIITE CAMPUS</span>
+                        Starts at <span class="typewriter-wrap"><span id="typewriter" class="text-gold"></span></span>
                     </h1>
                     <p class="text-slate-500 text-[15px] leading-7 mt-4">
                         Sri Lanka’s leading LMS for IT & English. Learn from global lecturers, work on real industry projects, and graduate with 98% employability. UGC-approved degrees, 24/7 LMS access, and guaranteed internships — all on one Laravel-powered platform built for your future.
@@ -348,6 +352,25 @@
         const lenis = new Lenis();
         function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
+        // Typewriter for SIITE CAMPUS — loops with pause
+        (function(){
+            const el = document.getElementById('typewriter');
+            const text = 'SIITE CAMPUS';
+            let i = 0, deleting = false, delay = 120;
+            function tick(){
+                if(!deleting){
+                    el.textContent = text.slice(0, i+1);
+                    i++;
+                    if(i === text.length){ deleting = false; setTimeout(()=>{ deleting = true; tick(); }, 1800); return; }
+                } else {
+                    el.textContent = text.slice(0, i-1);
+                    i--;
+                    if(i === 0){ deleting = false; }
+                }
+                setTimeout(tick, deleting ? 70 : 120);
+            }
+            tick();
+        })();
     </script>
 </body>
 </html>
