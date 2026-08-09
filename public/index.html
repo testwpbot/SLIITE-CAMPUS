@@ -80,7 +80,30 @@
             </a>
             <nav class="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-slate-700 mx-auto">
                 <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link flex items-center gap-1">Programs <i class="ri-arrow-down-s-line text-slate-400 text-[16px]"></i></a>
+                <div class="relative group">
+                    <a href="#" class="nav-link flex items-center gap-1">Programs <i class="ri-arrow-down-s-line text-slate-400 text-[16px] group-hover:rotate-180 transition"></i></a>
+                    <!-- Mega menu — desktop -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="bg-white rounded-2xl shadow-[0_20px_60px_rgba(15,45,77,0.18)] border border-slate-100 p-5 w-[680px] grid grid-cols-4 gap-4">
+                            <a href="#" class="group/item rounded-xl overflow-hidden border border-slate-100 hover:border-gold/50 hover:shadow-md transition">
+                                <div class="h-28 bg-gradient-to-br from-navy to-[#1a3a5f] grid place-items-center text-white text-3xl"><i class="ri-computer-line"></i></div>
+                                <div class="p-3"><div class="font-extrabold text-navy text-sm">Information Technology</div><div class="text-xs text-slate-500">Cert & Diploma</div></div>
+                            </a>
+                            <a href="#" class="group/item rounded-xl overflow-hidden border border-slate-100 hover:border-gold/50 hover:shadow-md transition">
+                                <div class="h-28 bg-gradient-to-br from-gold to-[#FFC933] grid place-items-center text-navy text-3xl"><i class="ri-english-input"></i></div>
+                                <div class="p-3"><div class="font-extrabold text-navy text-sm">English</div><div class="text-xs text-slate-500">Cert & Diploma</div></div>
+                            </a>
+                            <a href="#" class="group/item rounded-xl overflow-hidden border border-slate-100 hover:border-gold/50 hover:shadow-md transition">
+                                <div class="h-28 bg-gradient-to-br from-navy to-[#1a3a5f] grid place-items-center text-white text-3xl"><i class="ri-book-2-line"></i></div>
+                                <div class="p-3"><div class="font-extrabold text-navy text-sm">Arabic</div><div class="text-xs text-slate-500">Cert & Diploma</div></div>
+                            </a>
+                            <a href="#" class="group/item rounded-xl overflow-hidden border border-slate-100 hover:border-gold/50 hover:shadow-md transition">
+                                <div class="h-28 bg-gradient-to-br from-emerald-600 to-teal-600 grid place-items-center text-white text-3xl"><i class="ri-capsule-line"></i></div>
+                                <div class="p-3"><div class="font-extrabold text-navy text-sm">Pharmacy</div><div class="text-xs text-slate-500">Cert & Diploma</div></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <a href="#" class="nav-link">About</a>
                 <a href="#" class="nav-link">LMS</a>
                 <a href="#" class="nav-link">Admissions</a>
@@ -104,7 +127,15 @@
         </div>
         <nav class="flex-1 p-6 space-y-1 overflow-y-auto">
             <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-navy text-white font-bold"><i class="ri-home-5-line text-lg"></i> Home</a>
-            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-book-open-line text-lg text-navy"></i> Programs <i class="ri-arrow-down-s-line ml-auto text-slate-400"></i></a>
+            <div>
+                <button id="mobileProgramsBtn" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-book-open-line text-lg text-navy"></i> Programs <i class="ri-arrow-down-s-line ml-auto transition" id="mobileProgramsArrow"></i></button>
+                <div id="mobileProgramsMenu" class="hidden pl-4 mt-1 space-y-1 border-l-2 border-slate-100 ml-6">
+                    <a href="#" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-50 text-sm"><i class="ri-computer-line text-navy"></i> Information Technology</a>
+                    <a href="#" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-50 text-sm"><i class="ri-english-input text-gold"></i> English</a>
+                    <a href="#" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-50 text-sm"><i class="ri-book-2-line text-navy"></i> Arabic</a>
+                    <a href="#" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-50 text-sm"><i class="ri-capsule-line text-emerald-600"></i> Pharmacy Studies</a>
+                </div>
+            </div>
             <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-information-line text-lg text-navy"></i> About</a>
             <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-dashboard-line text-lg text-navy"></i> LMS</a>
             <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold"><i class="ri-graduation-cap-line text-lg text-navy"></i> Admissions</a>
@@ -330,7 +361,7 @@
                 <h2 class="font-display font-extrabold text-[32px] lg:text-[38px] leading-tight text-white mt-4">Certificate & Diploma <span class="text-gold">Courses</span></h2>
                 <p class="text-white/60 text-sm mt-2">Choose your path — Information Technology, English & Arabic</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-6 mt-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
                 <div class="group bg-white rounded-3xl p-7 border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition">
                     <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-computer-line"></i></div>
                     <h3 class="font-extrabold text-navy mt-4 text-lg">Information Technology</h3>
@@ -347,6 +378,12 @@
                     <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-book-2-line"></i></div>
                     <h3 class="font-extrabold text-navy mt-4 text-lg">Arabic</h3>
                     <p class="text-slate-500 text-sm mt-2">Certificate & Diploma in Arabic — reading, writing & conversational.</p>
+                    <a href="#apply" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy group-hover:gap-3 hover:text-gold transition-all">Explore <i class="ri-arrow-right-line bg-navy text-white w-6 h-6 rounded-full grid place-items-center group-hover:bg-gold group-hover:text-navy transition"></i></a>
+                </div>
+                <div class="group bg-white rounded-3xl p-7 border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-600 text-white grid place-items-center text-xl"><i class="ri-capsule-line"></i></div>
+                    <h3 class="font-extrabold text-navy mt-4 text-lg">Pharmacy</h3>
+                    <p class="text-slate-500 text-sm mt-2">Certificate & Diploma in Pharmacy — pharmaceutical sciences & practice.</p>
                     <a href="#apply" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy group-hover:gap-3 hover:text-gold transition-all">Explore <i class="ri-arrow-right-line bg-navy text-white w-6 h-6 rounded-full grid place-items-center group-hover:bg-gold group-hover:text-navy transition"></i></a>
                 </div>
             </div>
@@ -506,6 +543,9 @@
             btn?.addEventListener('click', open);
             close?.addEventListener('click', closeD);
             overlay?.addEventListener('click', closeD);
+            // mobile programs dropdown
+            const pBtn=document.getElementById('mobileProgramsBtn'), pMenu=document.getElementById('mobileProgramsMenu'), pArrow=document.getElementById('mobileProgramsArrow');
+            pBtn?.addEventListener('click', ()=>{ pMenu.classList.toggle('hidden'); pArrow.classList.toggle('rotate-180'); });
         })();
     </script>
     <!-- Lenis — exact scroll animation from CodePen (only scroll, no 3D) -->
