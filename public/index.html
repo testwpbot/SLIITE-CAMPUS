@@ -99,6 +99,15 @@
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute inset-0 bg-gradient-to-b from-[#F7FBFC] to-white"></div>
             <div class="absolute -right-32 top-1/2 -translate-y-1/2 w-[640px] h-[640px] bg-gradient-to-br from-navy/[0.05] to-gold/[0.04] rounded-full blur-[60px]"></div>
+            <!-- Educational background art — books, pencils, degree hats -->
+            <i class="ri-book-open-line absolute top-[14%] left-[6%] text-[42px] text-navy/[0.07] rotate-6"></i>
+            <i class="ri-quill-pen-line absolute top-[10%] left-[38%] text-[30px] text-gold/[0.12] -rotate-12"></i>
+            <i class="ri-graduation-cap-fill absolute top-[16%] right-[28%] text-[44px] text-navy/[0.06] rotate-12"></i>
+            <i class="ri-pencil-line absolute top-[32%] left-[12%] text-[28px] text-navy/[0.06] -rotate-6"></i>
+            <i class="ri-book-mark-line absolute bottom-[28%] left-[4%] text-[38px] text-navy/[0.05] rotate-3"></i>
+            <i class="ri-award-line absolute bottom-[18%] left-[30%] text-[32px] text-gold/[0.10] -rotate-12"></i>
+            <i class="ri-lightbulb-line absolute bottom-[32%] right-[16%] text-[36px] text-gold/[0.09] rotate-12"></i>
+            <i class="ri-compass-3-line absolute top-[48%] right-[6%] text-[26px] text-navy/[0.06]"></i>
         </div>
 
         <div class="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8">
