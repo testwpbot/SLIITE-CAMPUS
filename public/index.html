@@ -95,10 +95,12 @@
 
     <!-- HERO — with wave background art like reference -->
     <section class="relative overflow-hidden bg-white">
-        <!-- Wave background art — exact style from your reference -->
+        <!-- Wave background art — balanced left + right -->
         <div class="absolute inset-0 z-0">
-            <img src="/images/hero-bg-art.png" alt="" class="w-full h-full object-cover object-top opacity-90">
-            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent"></div>
+            <img src="/images/hero-bg-art.png" alt="" class="w-full h-full object-cover object-top opacity-[0.55]">
+            <!-- lighter overlay so left side art shows, but text still readable -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white/85 via-white/55 to-white/20"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent"></div>
         </div>
 
         <div class="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8">
