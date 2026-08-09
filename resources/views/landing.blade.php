@@ -245,6 +245,39 @@
         })();
     </script>
 
+    <!-- Why SIITE — LMS Focus: Videos, Papers, Quizzes -->
+    <section class="bg-white py-16">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-navy text-white rounded-full px-4 py-1.5 text-xs font-extrabold tracking-widest">WHY SIITE LMS</div>
+                <h2 class="font-display font-extrabold text-[32px] lg:text-[38px] leading-tight text-navy mt-4">Everything you need to <span class="text-gold">excel</span></h2>
+                <p class="text-slate-500 text-sm mt-3">Videos, past papers, quizzes, assignments & more — all in one Laravel-powered LMS, 24/7.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <div class="group bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(15,45,77,0.06)] hover:shadow-[0_16px_40px_rgba(15,45,77,0.10)] hover:-translate-y-1 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-play-circle-line"></i></div>
+                    <h3 class="font-extrabold text-navy mt-4">Video Lectures</h3>
+                    <p class="text-slate-500 text-sm mt-2">HD recorded + live classes. Rewatch anytime, 1.5x speed, notes synced.</p>
+                </div>
+                <div class="group bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(15,45,77,0.06)] hover:shadow-[0_16px_40px_rgba(15,45,77,0.10)] hover:-translate-y-1 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-gold text-navy grid place-items-center text-xl"><i class="ri-file-paper-line"></i></div>
+                    <h3 class="font-extrabold text-navy mt-4">Papers & Notes</h3>
+                    <p class="text-slate-500 text-sm mt-2">Past papers, model answers & lecturer notes — searchable & printable.</p>
+                </div>
+                <div class="group bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(15,45,77,0.06)] hover:shadow-[0_16px_40px_rgba(15,45,77,0.10)] hover:-translate-y-1 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-quill-pen-line"></i></div>
+                    <h3 class="font-extrabold text-navy mt-4">Quizzes & Assignments</h3>
+                    <p class="text-slate-500 text-sm mt-2">Auto-graded quizzes, deadlines, and instant feedback from lecturers.</p>
+                </div>
+                <div class="group bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_8px_30px_rgba(15,45,77,0.06)] hover:shadow-[0_16px_40px_rgba(15,45,77,0.10)] hover:-translate-y-1 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-gold text-navy grid place-items-center text-xl"><i class="ri-customer-service-2-line"></i></div>
+                    <h3 class="font-extrabold text-navy mt-4">And Much More</h3>
+                    <p class="text-slate-500 text-sm mt-2">Live chat, forums, certificates, GPA tracker & mobile app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Logos / Trust -->
     <section class="border-y border-slate-100 bg-white">
         <div class="max-w-[1280px] mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-6 text-slate-400 text-xs font-bold tracking-widest">
@@ -287,60 +320,7 @@
         </div>
     </section>
 
-    <!-- Why SIITE -->
-    <section class="bg-slate-50 py-14">
-        <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
-            <div class="relative">
-                <div class="bg-navy rounded-[28px] p-8 text-white overflow-hidden relative">
-                    <div class="absolute -right-10 -top-10 w-64 h-64 bg-navy/20 blur-3xl rounded-full"></div>
-                    <div class="relative">
-                        <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 text-xs font-bold tracking-widest">WHY SIITE CAMPUS</div>
-                        <h3 class="font-display font-extrabold text-3xl leading-none mt-4">More than a<br>Degree.</h3>
-                        <ul class="mt-6 space-y-4">
-                            <li class="flex gap-3"><span class="w-8 h-8 rounded-full bg-navy grid place-items-center text-sm flex-shrink-0"><i class="ri-check-line"></i></span><div><div class="font-bold">Smart LMS 24/7 Access</div><div class="text-white/70 text-sm">Recorded lectures, assignments, quizzes & live classes on one platform.</div></div></li>
-                            <li class="flex gap-3"><span class="w-8 h-8 rounded-full bg-gold text-navy grid place-items-center text-sm flex-shrink-0"><i class="ri-check-line"></i></span><div><div class="font-bold">Industrial Training & Placement</div><div class="text-white/70 text-sm">Guaranteed internships with top corporates in Colombo & abroad.</div></div></li>
-                            <li class="flex gap-3"><span class="w-8 h-8 rounded-full bg-white/15 grid place-items-center text-sm flex-shrink-0"><i class="ri-check-line"></i></span><div><div class="font-bold">Global Transfer Options</div><div class="text-white/70 text-sm">UK / Australia pathway with partner universities.</div></div></li>
-                        </ul>
-                        <div class="mt-6 flex gap-3">
-                            <a href="#" class="bg-white text-navy font-extrabold px-6 py-3 rounded-full text-sm">Take Virtual Tour</a>
-                            <a href="#" class="border border-white/20 text-white font-bold px-6 py-3 rounded-full text-sm">Download Prospectus</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- small stats -->
-                <div class="absolute -bottom-6 -right-2 sm:right-6 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-4 border border-slate-100">
-                    <img src="https://i.pravatar.cc/100?img=15" class="w-12 h-12 rounded-full">
-                    <div>
-                        <div class="font-extrabold text-navy">Dr. Nimali Perera</div>
-                        <div class="text-xs text-slate-500">Dean - Computing</div>
-                        <div class="flex text-gold text-xs">★★★★★</div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid sm:grid-cols-2 gap-5">
-                <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm">
-                    <div class="w-11 h-11 rounded-xl bg-navy-50 text-navy-800 grid place-items-center text-xl"><i class="ri-laptop-line"></i></div>
-                    <h4 class="font-extrabold text-navy mt-4">Modern LMS</h4>
-                    <p class="text-slate-500 text-sm mt-2">Laravel powered, super fast, mobile friendly. Track GPA, attendance & certificates.</p>
-                </div>
-                <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm">
-                    <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-500 grid place-items-center text-xl"><i class="ri-team-line"></i></div>
-                    <h4 class="font-extrabold text-navy mt-4">Top Lecturers</h4>
-                    <p class="text-slate-500 text-sm mt-2">PhD holders & industry experts from Sri Lanka & abroad.</p>
-                </div>
-                <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm">
-                    <div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 grid place-items-center text-xl"><i class="ri-briefcase-line"></i></div>
-                    <h4 class="font-extrabold text-navy mt-4">Career Hub</h4>
-                    <p class="text-slate-500 text-sm mt-2">CV clinics, mock interviews & direct employer connects.</p>
-                </div>
-                <div class="bg-gold rounded-3xl p-6 text-navy">
-                    <div class="text-4xl font-extrabold">98%</div>
-                    <div class="font-bold">Graduate Employability within 6 months</div>
-                    <div class="text-sm mt-2 opacity-80">Highest in private higher education - 2024 survey.</div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- CTA -->
     <section class="max-w-[1280px] mx-auto px-6 py-10">
