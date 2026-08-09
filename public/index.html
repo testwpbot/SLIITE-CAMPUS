@@ -59,9 +59,9 @@
         </div>
     </div>
 
-    <!-- Navbar — seamless with hero: same solid at top, turns white on scroll -->
-    <header id="mainHeader" class="sticky top-0 z-50 bg-[#F7FBFC] border-b border-transparent transition-all duration-300">
-        <div class="relative max-w-[1280px] mx-auto px-6 h-[72px] flex items-center">
+    <!-- Navbar — seamless with hero: solid #F7FBFC at top, no shadow -->
+    <header id="mainHeader" class="sticky top-0 z-50 bg-[#F7FBFC] border-b border-transparent shadow-none transition-all duration-300">
+        <div class="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center">
             <a href="/" class="flex items-center shrink-0">
                 <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[62px] lg:h-[72px] w-auto object-contain">
             </a>
@@ -84,15 +84,11 @@
     </header>
 
     <!-- HERO — COMPLETELY REDESIGNED (premium, clean, balanced) -->
-    <section class="relative overflow-hidden bg-white">
-        <!-- New background art — geometric, clean, SIITE palette -->
+    <section class="relative overflow-hidden bg-[#F7FBFC]">
+        <!-- Soft background — same as header, no grid seam -->
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute inset-0 bg-gradient-to-b from-[#F7FBFC] to-white"></div>
-            <!-- large soft shape behind person -->
-            <div class="absolute -right-32 top-1/2 -translate-y-1/2 w-[720px] h-[720px] bg-gradient-to-br from-teal/[0.08] to-gold/[0.07] rounded-full blur-3xl"></div>
-            <div class="absolute right-[8%] top-[12%] w-[420px] h-[420px] bg-navy/[0.04] rounded-[48px] rotate-12"></div>
-            <!-- subtle grid -->
-            <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(#0F2D4D 1px, transparent 1px), linear-gradient(90deg, #0F2D4D 1px, transparent 1px); background-size: 40px 40px;"></div>
+            <div class="absolute -right-32 top-1/2 -translate-y-1/2 w-[720px] h-[720px] bg-gradient-to-br from-teal/[0.07] to-gold/[0.06] rounded-full blur-3xl"></div>
         </div>
 
         <div class="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-8">
