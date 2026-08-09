@@ -73,21 +73,29 @@
         </div>
     </header>
 
-    <!-- HERO — with autoplay graduation background slider (white theme) -->
-    <section class="relative overflow-hidden bg-white">
-        <!-- Background Slider — FIXED visibility: less washed out, graduation clearly visible but still white theme -->
-        <div id="heroSlider" class="absolute inset-0 z-0">
-            <div class="slide absolute inset-0 opacity-100 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide1.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/72"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/82 to-white/45"></div></div>
-            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide2.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/72"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/82 to-white/45"></div></div>
-            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide3.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/72"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/82 to-white/45"></div></div>
-            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"><img src="/images/slider/slide4.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-white/72"></div><div class="absolute inset-0 bg-gradient-to-r from-white via-white/82 to-white/45"></div></div>
-        </div>
-        <!-- Slider dots — FIXED position: centered above bottom border, not overlapping stats -->
-        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-white/80 backdrop-blur px-3 py-2 rounded-full shadow-sm border border-slate-200">
-            <button class="dot h-2.5 w-8 rounded-full bg-navy transition-all" data-i="0" aria-label="slide 1"></button>
-            <button class="dot h-2.5 w-2.5 rounded-full bg-navy/20 transition-all" data-i="1" aria-label="slide 2"></button>
-            <button class="dot h-2.5 w-2.5 rounded-full bg-navy/20 transition-all" data-i="2" aria-label="slide 3"></button>
-            <button class="dot h-2.5 w-2.5 rounded-full bg-navy/20 transition-all" data-i="3" aria-label="slide 4"></button>
+    <!-- HERO — educational art background (light, premium) -->
+    <section class="relative overflow-hidden bg-[#F8FBFD]">
+        <!-- Educational art background -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <!-- soft gradient base -->
+            <div class="absolute inset-0 bg-gradient-to-br from-white via-[#F3F8FA] to-[#EEF4F7]"></div>
+            <!-- subtle dot grid -->
+            <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(#0F2D4D 1.2px, transparent 1.2px); background-size: 22px 22px;"></div>
+            <!-- floating educational icons — very faint, palette matched -->
+            <i class="ri-graduation-cap-fill absolute top-[12%] left-[8%] text-[64px] text-navy/[0.06] rotate-12"></i>
+            <i class="ri-book-open-line absolute top-[18%] left-[28%] text-[36px] text-teal/[0.08] -rotate-12"></i>
+            <i class="ri-lightbulb-line absolute top-[8%] right-[22%] text-[48px] text-gold/[0.10] rotate-6"></i>
+            <i class="ri-quill-pen-line absolute top-[30%] right-[8%] text-[40px] text-navy/[0.06] -rotate-12"></i>
+            <i class="ri-calculator-line absolute bottom-[24%] left-[6%] text-[42px] text-navy/[0.05] rotate-12"></i>
+            <i class="ri-microscope-line absolute bottom-[18%] left-[32%] text-[38px] text-teal/[0.07] -rotate-6"></i>
+            <i class="ri-code-s-slash-line absolute bottom-[14%] right-[18%] text-[44px] text-gold/[0.09] rotate-12"></i>
+            <i class="ri-award-line absolute top-[42%] right-[30%] text-[30px] text-navy/[0.05]"></i>
+            <!-- soft blobs -->
+            <div class="absolute -top-20 -right-20 w-[520px] h-[520px] bg-teal/10 blur-[90px] rounded-full"></div>
+            <div class="absolute -bottom-32 -left-20 w-[560px] h-[560px] bg-gold/10 blur-[100px] rounded-full"></div>
+            <div class="absolute top-1/3 right-1/4 w-[360px] h-[360px] bg-navy/5 blur-[80px] rounded-full"></div>
+            <!-- curved underline art -->
+            <svg class="absolute bottom-0 left-0 w-full h-[120px] opacity-[0.04]" viewBox="0 0 1440 120" fill="none"><path d="M0 80 Q 360 10 720 60 T1440 40" stroke="#0F2D4D" stroke-width="2" fill="none"/><path d="M0 100 Q 400 30 800 80 T1440 60" stroke="#FFB703" stroke-width="1.5" fill="none"/></svg>
         </div>
         <div class="relative z-10 max-w-[1280px] mx-auto px-6 pt-8 lg:pt-4 pb-12 lg:pb-0">
             <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center">
@@ -218,28 +226,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        // Hero autoplay slider — 3.5s, pause on hover, dots clickable
-        (function(){
-            const slides = document.querySelectorAll('#heroSlider .slide');
-            const dots = document.querySelectorAll('.dot');
-            let cur = 0, timer;
-            function show(i){
-                slides.forEach((s,idx)=> s.style.opacity = idx===i ? '1' : '0');
-                dots.forEach((d,idx)=>{ d.className = idx===i ? 'dot h-2.5 w-8 rounded-full bg-navy transition-all' : 'dot h-2.5 w-2.5 rounded-full bg-navy/20 transition-all'; });
-                cur = i;
-            }
-            function next(){ show((cur+1)%slides.length); }
-            function start(){ timer = setInterval(next, 3500); }
-            function stop(){ clearInterval(timer); }
-            dots.forEach(d=> d.addEventListener('click', ()=>{ show(parseInt(d.dataset.i)); stop(); start(); }));
-            const hero = document.getElementById('heroSlider');
-            hero.addEventListener('mouseenter', stop);
-            hero.addEventListener('mouseleave', start);
-            start();
-        })();
-    </script>
 
     <!-- Logos / Trust -->
     <section class="border-y border-slate-100 bg-white">
