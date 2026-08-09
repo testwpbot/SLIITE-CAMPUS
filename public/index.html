@@ -25,6 +25,7 @@
         }
     </script>
     <style>
+        html { scroll-behavior: smooth; }
         .glass { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
         .hero-bg { background: radial-gradient(ellipse at 72% 18%, rgba(14,159,156,0.10) 0%, transparent 55%), radial-gradient(ellipse at 8% 85%, rgba(212,160,23,0.07) 0%, transparent 50%), linear-gradient(180deg, #F8FBFC 0%, #EEF4F6 100%); }
         .hero-card { background: linear-gradient(180deg, #020203 0%, #0A0A0A 50%, #111111 100%); box-shadow: 0 25px 80px -12px rgba(2,6,23,0.35), 0 0 0 1px rgba(255,255,255,0.06) inset; }
@@ -320,15 +321,28 @@
             function onScroll(){
                 if(window.scrollY > 6){
                     h.classList.add('bg-white/95','backdrop-blur','glass','shadow-[0_8px_30px_rgba(15,45,77,0.08)]','border-slate-200/60');
-                    h.classList.remove('bg-[#F7FBFC]','border-transparent');
+                    h.classList.remove('bg-[#F7FBFC]','border-transparent','shadow-none');
                 } else {
                     h.classList.remove('bg-white/95','backdrop-blur','glass','shadow-[0_8px_30px_rgba(15,45,77,0.08)]','border-slate-200/60');
-                    h.classList.add('bg-[#F7FBFC]','border-transparent');
+                    h.classList.add('bg-[#F7FBFC]','border-transparent','shadow-none');
                 }
             }
             window.addEventListener('scroll', onScroll, {passive:true});
             onScroll();
         })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script>
+        // Buttery smooth scroll — like Apple / Linear
+        const lenis = new Lenis({ duration: 1.15, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+        function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+        document.querySelectorAll('a[href^=\"#\"]').forEach(a=>{
+            a.addEventListener('click', (e)=>{
+                const id=a.getAttribute('href');
+                if(id.length>1){ e.preventDefault(); lenis.scrollTo(document.querySelector(id)); }
+            });
+        });
     </script>
 </body>
 </html>
