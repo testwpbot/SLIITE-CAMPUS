@@ -74,9 +74,9 @@
 
     <!-- Navbar — seamless with hero: solid #F7FBFC at top, no shadow -->
     <header id="mainHeader" class="sticky top-0 z-50 bg-[#F7FBFC] border-b border-transparent shadow-none transition-all duration-300 will-change-transform">
-        <div class="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center">
+        <div class="max-w-[1280px] mx-auto px-3 sm:px-6 h-[64px] sm:h-[72px] flex items-center justify-between gap-2">
             <a href="/" class="flex items-center shrink-0">
-                <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[62px] lg:h-[72px] w-auto object-contain">
+                <img src="/images/logo-removebg-preview.png" alt="SIITE Campus" class="h-[48px] sm:h-[56px] lg:h-[72px] w-auto object-contain">
             </a>
             <nav class="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-slate-700 mx-auto">
                 <a href="#" class="nav-link">Home</a>
@@ -86,12 +86,12 @@
                 <a href="#" class="nav-link">Admissions</a>
                 <a href="#" class="nav-link">Contact</a>
             </nav>
-            <div class="flex items-center gap-3 shrink-0">
+            <div class="flex items-center gap-2 sm:gap-3 shrink-0">
                 <a href="/login" class="hidden md:inline-flex items-center gap-1.5 text-sm font-bold text-navy hover:text-navy-600 leading-none"><i class="ri-user-3-line text-[16px]"></i> Student Login</a>
-                <a href="/register" class="inline-flex items-center gap-1.5 bg-gold hover:bg-gold-dark text-navy font-extrabold text-sm px-6 h-10 rounded-full shadow-[0_8px_20px_rgba(255,183,3,0.35)] transition leading-none">
+                <a href="/register" class="hidden sm:inline-flex items-center gap-1.5 bg-gold hover:bg-gold-dark text-navy font-extrabold text-sm px-4 sm:px-6 h-9 sm:h-10 rounded-full shadow-[0_8px_20px_rgba(255,183,3,0.35)] transition leading-none whitespace-nowrap">
                     Apply Now <i class="ri-arrow-right-line"></i>
                 </a>
-                <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 grid place-items-center hover:bg-slate-200 transition"><i class="ri-menu-line text-xl text-navy"></i></button>
+                <button id="mobileMenuBtn" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 grid place-items-center hover:bg-slate-200 transition shrink-0"><i class="ri-menu-line text-xl text-navy"></i></button>
             </div>
         </div>
     </header>
