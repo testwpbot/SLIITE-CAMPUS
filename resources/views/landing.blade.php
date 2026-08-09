@@ -245,18 +245,23 @@
         })();
     </script>
 
-    <!-- Why SIITE — LMS Focus: Visual split with mockup -->
+    <!-- Why SIITE — LMS Focus: Art style, no image -->
     <section class="bg-white py-16 overflow-hidden">
         <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
-            <!-- Left: LMS mockup visual -->
-            <div class="relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-navy/[0.06] to-gold/[0.06] rounded-[32px] blur-2xl"></div>
-                <img src="/images/lms-mockup.png" alt="SIITE LMS Dashboard" class="relative w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(15,45,77,0.15)] rounded-2xl">
-                <!-- floating badge -->
-                <div class="absolute -bottom-4 -right-2 lg:right-6 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3 border border-slate-100">
-                    <div class="w-10 h-10 rounded-full bg-gold text-navy grid place-items-center"><i class="ri-vidicon-line"></i></div>
-                    <div><div class="text-sm font-extrabold text-navy">24/7 Access</div><div class="text-xs text-slate-500">Any device, anytime</div></div>
-                </div>
+            <!-- Left: Pure CSS art — LMS feature orbit -->
+            <div class="relative flex items-center justify-center py-8">
+                <div class="absolute inset-0 bg-gradient-to-br from-navy/[0.04] to-gold/[0.05] rounded-[32px]"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] border border-slate-200 rounded-full opacity-30"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] border border-dashed border-slate-300 rounded-full opacity-40"></div>
+                <!-- center -->
+                <div class="relative w-[88px] h-[88px] rounded-2xl bg-navy text-white grid place-items-center text-3xl shadow-xl z-10"><i class="ri-graduation-cap-fill"></i></div>
+                <!-- orbit items -->
+                <div class="absolute top-[12%] left-[18%] w-16 h-16 rounded-2xl bg-white shadow-lg border border-slate-100 grid place-items-center text-navy text-xl"><i class="ri-play-circle-line"></i></div>
+                <div class="absolute top-[12%] right-[18%] w-16 h-16 rounded-2xl bg-gold shadow-lg grid place-items-center text-navy text-xl"><i class="ri-file-paper-line"></i></div>
+                <div class="absolute bottom-[12%] left-[18%] w-16 h-16 rounded-2xl bg-white shadow-lg border border-slate-100 grid place-items-center text-gold text-xl"><i class="ri-quill-pen-line"></i></div>
+                <div class="absolute bottom-[12%] right-[18%] w-16 h-16 rounded-2xl bg-navy shadow-lg grid place-items-center text-white text-xl"><i class="ri-customer-service-2-line"></i></div>
+                <div class="absolute left-1/2 -translate-x-1/2 top-[4%] bg-white rounded-full px-3 py-1 text-xs font-extrabold shadow border">Videos</div>
+                <div class="absolute left-1/2 -translate-x-1/2 bottom-[4%] bg-white rounded-full px-3 py-1 text-xs font-extrabold shadow border">Support</div>
             </div>
             <!-- Right: features timeline -->
             <div>
