@@ -98,8 +98,13 @@
                         Starts at <span class="text-teal">SIITE</span>
                     </h1>
                     <p class="text-slate-500 text-[15px] leading-7 mt-4">
-                        Sri Lanka’s leading LMS for IT & English. Global lecturers, industry projects, and <span class="font-bold text-navy">98% employability</span> — all on one Laravel-powered platform.
+                        Sri Lanka’s leading LMS for IT & English. Learn from global lecturers, work on real industry projects, and graduate with 98% employability. UGC-approved degrees, 24/7 LMS access, and guaranteed internships — all on one Laravel-powered platform built for your future.
                     </p>
+                    <ul class="mt-4 flex flex-wrap gap-3 text-xs font-bold">
+                        <li class="inline-flex items-center gap-1.5 bg-white border border-slate-200 rounded-full px-3 py-1.5"><i class="ri-check-line text-teal"></i> UGC Approved</li>
+                        <li class="inline-flex items-center gap-1.5 bg-white border border-slate-200 rounded-full px-3 py-1.5"><i class="ri-check-line text-teal"></i> 24/7 LMS Access</li>
+                        <li class="inline-flex items-center gap-1.5 bg-white border border-slate-200 rounded-full px-3 py-1.5"><i class="ri-check-line text-teal"></i> Guaranteed Internships</li>
+                    </ul>
 
                     <div class="mt-7 flex flex-wrap items-center gap-3">
                         <a href="#" class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-[#0A2342] text-white font-extrabold px-8 h-[50px] rounded-full text-sm shadow-[0_12px_24px_rgba(15,45,77,0.18)] transition">
