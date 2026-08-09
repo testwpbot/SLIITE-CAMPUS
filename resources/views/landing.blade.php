@@ -189,6 +189,53 @@
         </div>
     </section>
 
+    <!-- Graduation Gallery — Full width image slider -->
+    <section class="w-full bg-navy-800 py-10 overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-6 flex items-end justify-between gap-4 mb-6">
+            <div>
+                <div class="inline-flex items-center gap-2 text-gold font-extrabold text-xs tracking-widest"><i class="ri-image-line"></i> GRADUATION GALLERY</div>
+                <h2 class="font-display font-extrabold text-2xl lg:text-3xl text-white mt-2">Moments of <span class="text-gold">Pride</span></h2>
+            </div>
+            <div class="hidden sm:flex gap-2">
+                <button id="galleryPrev" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white grid place-items-center border border-white/10"><i class="ri-arrow-left-line"></i></button>
+                <button id="galleryNext" class="w-10 h-10 rounded-full bg-white text-navy grid place-items-center shadow"><i class="ri-arrow-right-line"></i></button>
+            </div>
+        </div>
+        <div id="galleryTrack" class="flex gap-4 overflow-x-auto scrollbar-none scroll-smooth snap-x snap-mandatory px-6 lg:px-[calc((100%-1280px)/2+24px)] pb-2" style="scrollbar-width:none;">
+            <img src="/images/gallery/university-graduation-ceremony-students--1.jpg" class="snap-center h-[220px] lg:h-[280px] w-[320px] lg:w-[420px] object-cover rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition">
+            <img src="/images/gallery/university-graduation-ceremony-students--2.jpg" class="snap-center h-[220px] lg:h-[280px] w-[320px] lg:w-[420px] object-cover rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition">
+            <img src="/images/gallery/university-graduation-ceremony-students--4.jpg" class="snap-center h-[220px] lg:h-[280px] w-[320px] lg:w-[420px] object-cover rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition">
+            <img src="/images/gallery/graduation-cap-book-university-campus-sr-2.jpg" class="snap-center h-[220px] lg:h-[280px] w-[320px] lg:w-[420px] object-cover rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition">
+            <img src="/images/gallery/graduation-cap-book-university-campus-sr-3.jpg" class="snap-center h-[220px] lg:h-[280px] w-[320px] lg:w-[420px] object-cover rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition">
+            <img src="/images/gallery/graduation-cap-book-university-campus-sr-1.jpg" class="snap-center h-[220px] lg:h-[280px] w-[320px] lg:w-[420px] object-cover rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition">
+            <img src="/images/gallery/university-graduation-ceremony-students--3.jpg" class="snap-center h-[220px] lg:h-[280px] w-[320px] lg:w-[420px] object-cover rounded-2xl shrink-0 border-2 border-white/10 hover:border-gold/50 transition">
+        </div>
+        <div class="max-w-[1280px] mx-auto px-6 mt-4 flex justify-center gap-2">
+            <span class="h-1.5 w-8 bg-gold rounded-full"></span><span class="h-1.5 w-1.5 bg-white/30 rounded-full"></span><span class="h-1.5 w-1.5 bg-white/30 rounded-full"></span>
+        </div>
+    </section>
+    <script>
+        // Gallery autoplay + arrows
+        (function(){
+            const track = document.getElementById('galleryTrack');
+            if(!track) return;
+            let idx=0, timer;
+            const imgs = track.querySelectorAll('img');
+            function go(i){ imgs[i]?.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'}); }
+            function next(){ idx=(idx+1)%imgs.length; go(idx); }
+            function prev(){ idx=(idx-1+imgs.length)%imgs.length; go(idx); }
+            document.getElementById('galleryNext')?.addEventListener('click', ()=>{ next(); reset(); });
+            document.getElementById('galleryPrev')?.addEventListener('click', ()=>{ prev(); reset(); });
+            function start(){ timer=setInterval(next, 2800); }
+            function reset(){ clearInterval(timer); start(); }
+            track.addEventListener('mouseenter', ()=> clearInterval(timer));
+            track.addEventListener('mouseleave', start);
+            let sx=0; track.addEventListener('touchstart', e=> sx=e.touches[0].clientX);
+            track.addEventListener('touchend', e=>{ if(e.changedTouches[0].clientX < sx-40) next(); if(e.changedTouches[0].clientX > sx+40) prev(); });
+            start();
+        })();
+    </script>
+
     <!-- Logos / Trust -->
     <section class="border-y border-slate-100 bg-white">
         <div class="max-w-[1280px] mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-6 text-slate-400 text-xs font-bold tracking-widest">
