@@ -333,14 +333,14 @@
     </script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
     <script>
-        // Buttery smooth scroll — like Apple / Linear
-        const lenis = new Lenis({ duration: 1.15, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+        // Smooth but snappy — faster, less delay on wheel
+        const lenis = new Lenis({ duration: 0.65, wheelMultiplier: 1.15, touchMultiplier: 1.6, easing: (t) => 1 - Math.pow(1 - t, 3), smoothWheel: true, syncTouch: true });
         function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
         document.querySelectorAll('a[href^=\"#\"]').forEach(a=>{
             a.addEventListener('click', (e)=>{
                 const id=a.getAttribute('href');
-                if(id.length>1){ e.preventDefault(); lenis.scrollTo(document.querySelector(id)); }
+                if(id.length>1){ e.preventDefault(); lenis.scrollTo(document.querySelector(id), {duration: 0.8}); }
             });
         });
     </script>
