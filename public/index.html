@@ -300,6 +300,56 @@
         </div>
     </section>
 
+    <!-- Success Stories — Student Testimonials -->
+    <section class="bg-[#F8FBFD] py-16">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="flex flex-wrap items-end justify-between gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-gold text-navy rounded-full px-4 py-1.5 text-xs font-extrabold tracking-widest">SUCCESS STORIES</div>
+                    <h2 class="font-display font-extrabold text-[32px] leading-tight text-navy mt-3">What our <span class="text-gold">students</span> say</h2>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="document.getElementById('testTrack').scrollBy({left:-360, behavior:'smooth'})" class="w-10 h-10 rounded-full bg-white border border-slate-200 grid place-items-center hover:bg-slate-50"><i class="ri-arrow-left-line"></i></button>
+                    <button onclick="document.getElementById('testTrack').scrollBy({left:360, behavior:'smooth'})" class="w-10 h-10 rounded-full bg-navy text-white grid place-items-center shadow"><i class="ri-arrow-right-line"></i></button>
+                </div>
+            </div>
+            <div id="testTrack" class="mt-8 flex gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory pb-4" style="scrollbar-width:none;">
+                <div class="snap-center min-w-[340px] max-w-[380px] bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_12px_32px_rgba(15,45,77,0.06)] shrink-0">
+                    <div class="flex gap-1 text-gold text-sm">★★★★★</div>
+                    <p class="text-slate-600 text-sm leading-6 mt-3">“SIITE LMS made my finals easy — recorded videos + past papers in one place. I topped my batch!”</p>
+                    <div class="flex items-center gap-3 mt-5">
+                        <img src="https://i.pravatar.cc/100?img=33" class="w-10 h-10 rounded-full">
+                        <div><div class="font-extrabold text-navy text-sm">Nimal Perera</div><div class="text-xs text-slate-500">BSc Software Eng. — 2024</div></div>
+                    </div>
+                </div>
+                <div class="snap-center min-w-[340px] max-w-[380px] bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_12px_32px_rgba(15,45,77,0.06)] shrink-0">
+                    <div class="flex gap-1 text-gold text-sm">★★★★★</div>
+                    <p class="text-slate-600 text-sm leading-6 mt-3">“Quizzes are auto-graded and lecturers reply in hours. Best platform I’ve used in Sri Lanka.”</p>
+                    <div class="flex items-center gap-3 mt-5">
+                        <img src="https://i.pravatar.cc/100?img=26" class="w-10 h-10 rounded-full">
+                        <div><div class="font-extrabold text-navy text-sm">Fathima Rizwa</div><div class="text-xs text-slate-500">Business Management — 2024</div></div>
+                    </div>
+                </div>
+                <div class="snap-center min-w-[340px] max-w-[380px] bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_12px_32px_rgba(15,45,77,0.06)] shrink-0">
+                    <div class="flex gap-1 text-gold text-sm">★★★★★</div>
+                    <p class="text-slate-600 text-sm leading-6 mt-3">“From videos to certificates — everything is on my phone. Got my internship via Campus Career Hub!”</p>
+                    <div class="flex items-center gap-3 mt-5">
+                        <img src="https://i.pravatar.cc/100?img=15" class="w-10 h-10 rounded-full">
+                        <div><div class="font-extrabold text-navy text-sm">Danuka Silva</div><div class="text-xs text-slate-500">Engineering — 2023</div></div>
+                    </div>
+                </div>
+                <div class="snap-center min-w-[340px] max-w-[380px] bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_12px_32px_rgba(15,45,77,0.06)] shrink-0">
+                    <div class="flex gap-1 text-gold text-sm">★★★★★</div>
+                    <p class="text-slate-600 text-sm leading-6 mt-3">“Papers & notes are searchable — saved me weeks. UGC-approved and trusted!”</p>
+                    <div class="flex items-center gap-3 mt-5">
+                        <img src="https://i.pravatar.cc/100?img=29" class="w-10 h-10 rounded-full">
+                        <div><div class="font-extrabold text-navy text-sm">Sajini Fernando</div><div class="text-xs text-slate-500">Hospitality — 2024</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Logos / Trust -->
     <section class="border-y border-slate-100 bg-white">
         <div class="max-w-[1280px] mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-6 text-slate-400 text-xs font-bold tracking-widest">
