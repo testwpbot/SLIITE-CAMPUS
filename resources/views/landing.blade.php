@@ -300,6 +300,37 @@
         </div>
     </section>
 
+    <!-- Programs — SIITE Certificate & Diploma (navy) -->
+    <section class="bg-navy py-16">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-white/10 text-white border border-white/10 rounded-full px-4 py-1.5 text-xs font-extrabold tracking-widest">PROGRAMS</div>
+                <h2 class="font-display font-extrabold text-[32px] lg:text-[38px] leading-tight text-white mt-4">Certificate & Diploma <span class="text-gold">Courses</span></h2>
+                <p class="text-white/60 text-sm mt-2">Choose your path — Information Technology, English & Arabic</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mt-10">
+                <div class="group bg-white rounded-3xl p-7 border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-computer-line"></i></div>
+                    <h3 class="font-extrabold text-navy mt-4 text-lg">Information Technology</h3>
+                    <p class="text-slate-500 text-sm mt-2">Certificate & Diploma in IT — from basics to advanced networking & software.</p>
+                    <div class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy">Explore <i class="ri-arrow-right-line"></i></div>
+                </div>
+                <div class="group bg-white rounded-3xl p-7 border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-gold text-navy grid place-items-center text-xl"><i class="ri-english-input"></i></div>
+                    <h3 class="font-extrabold text-navy mt-4 text-lg">English</h3>
+                    <p class="text-slate-500 text-sm mt-2">Certificate & Diploma in English — grammar, business & academic English.</p>
+                    <div class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy">Explore <i class="ri-arrow-right-line"></i></div>
+                </div>
+                <div class="group bg-white rounded-3xl p-7 border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-navy text-white grid place-items-center text-xl"><i class="ri-book-2-line"></i></div>
+                    <h3 class="font-extrabold text-navy mt-4 text-lg">Arabic</h3>
+                    <p class="text-slate-500 text-sm mt-2">Certificate & Diploma in Arabic — reading, writing & conversational.</p>
+                    <div class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy">Explore <i class="ri-arrow-right-line"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Success Stories — Student Testimonials -->
     <section class="bg-[#F8FBFD] py-16">
         <div class="max-w-[1280px] mx-auto px-6">
@@ -362,35 +393,7 @@
         </div>
     </section>
 
-    <!-- Programs -->
-    <section class="py-14 bg-white">
-        <div class="max-w-[1280px] mx-auto px-6">
-            <div class="flex flex-wrap items-end justify-between gap-4">
-                <div>
-                    <div class="inline-flex items-center gap-2 text-navy-800 font-extrabold text-xs tracking-widest"><span class="w-8 h-px bg-navy"></span> OUR PROGRAMS</div>
-                    <h2 class="font-display font-extrabold text-[32px] leading-none text-navy mt-3">Industry Aligned<br><span class="text-slate-400">Degrees for the Future</span></h2>
-                </div>
-                <a href="#" class="inline-flex items-center gap-2 font-bold text-navy text-sm">View all programs <i class="ri-arrow-right-line bg-gold w-7 h-7 rounded-full grid place-items-center text-navy"></i></a>
-            </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                @php $programs = $programs ?? []; @endphp
-                @foreach([
-                    ['title'=>'Computing & IT','icon'=>'ri-computer-line','color'=>'bg-navy','desc'=>'Software Engineering, Cyber Security, Data Science, AI'],
-                    ['title'=>'Business Management','icon'=>'ri-line-chart-line','color'=>'bg-gold','desc'=>'Marketing, Finance, HR, Entrepreneurship & Logistics'],
-                    ['title'=>'Engineering','icon'=>'ri-settings-3-line','color'=>'bg-navy','desc'=>'Civil, Mechanical, Electrical & Quantity Surveying'],
-                    ['title'=>'Hospitality & Tourism','icon'=>'ri-plane-line','color'=>'bg-navy','desc'=>'Hotel Management, Event Management & Culinary Arts'],
-                ] as $p)
-                <div class="group bg-white rounded-[24px] border border-slate-100 p-6 shadow-[0_8px_30px_rgba(15,45,77,0.06)] hover:shadow-[0_16px_40px_rgba(15,45,77,0.10)] hover:-translate-y-1 transition">
-                    <div class="w-12 h-12 rounded-2xl {{$p['color']}} text-white grid place-items-center text-xl"><i class="{{$p['icon']}}"></i></div>
-                    <h3 class="font-extrabold text-navy mt-4 text-[17px]">{{$p['title']}}</h3>
-                    <p class="text-slate-500 text-sm mt-2 leading-6">{{$p['desc']}}</p>
-                    <div class="mt-5 flex items-center gap-2 text-sm font-bold text-navy group-hover:gap-3 transition-all">Learn more <i class="ri-arrow-right-line"></i></div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
 
 
 
